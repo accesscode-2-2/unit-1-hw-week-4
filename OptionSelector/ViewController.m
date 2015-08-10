@@ -2,7 +2,7 @@
 //  ViewController.m
 //  OptionSelector
 //
-//  Created by Michael Kavouras on 8/9/15.
+//  Created by Diana Elezaj on 8/9/15.
 //  Copyright (c) 2015 Mike Kavouras. All rights reserved.
 //
 
@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
+//didReceiveMemoryWarning
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
