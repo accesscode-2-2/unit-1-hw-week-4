@@ -32,7 +32,7 @@
     return self;
 }
 
-- (NSArray *)getCategories {
+- (NSArray *)fetchCategories {
     return self.categories;
 }
 

@@ -48,6 +48,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="r6H-SQ-Jgw" kind="show" id="s0a-qO-fQv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -56,9 +59,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="A2O-WV-ZXW"/>
-                    <connections>
-                        <segue destination="r6H-SQ-Jgw" kind="show" id="ndM-Ly-5I3"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6CJ-Q3-Fgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,7 +88,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1g-rp-d5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="588"/>
+            <point key="canvasLocation" x="2366" y="-136"/>
         </scene>
     </scenes>
 </document>

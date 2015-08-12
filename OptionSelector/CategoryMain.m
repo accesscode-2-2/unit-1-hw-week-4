@@ -20,7 +20,7 @@
 + (instancetype)categoryManager {
     static CategoryMain *categoryManager = nil;
     
-       static dispatch_once_t onceToken;
+    static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         categoryManager = [[self alloc] init];
     });
@@ -28,12 +28,11 @@
     return categoryManager;
 }
 
-//- (instancetype)init {
-//    if (self = [super init]) {
-//        self.categoryBuild = [[CategoryMain alloc] init];
-//        self.categories = [self.categoryBuild get  ];
-//    }
-//    return self;
-//}
+- (instancetype)init {
+    if (self = [super init]) {
+        self.categoryBuild = [[CategorySetup alloc] init];
+    }
+    return self;
+}
 
 @end

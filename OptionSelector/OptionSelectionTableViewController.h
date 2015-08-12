@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OptionSelectionTableViewController : UITableViewController
+@interface OptionSelectionTableViewController : UITableViewController <OptionSelectionTableViewControllerDelegate>
 
 @end

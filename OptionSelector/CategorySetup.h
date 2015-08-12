@@ -11,6 +11,6 @@
 
 @interface CategorySetup : Categories
 
-- (NSArray *)getCategories;
+- (NSArray *)fetchCategories;
 
 @end
