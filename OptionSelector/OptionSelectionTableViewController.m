@@ -1,18 +1,18 @@
 //
-//  CategoryTableViewController.m
+//  OptionSelectionTableViewController.m
 //  OptionSelector
 //
 //  Created by Charles Kang on 8/11/15.
 //  Copyright (c) 2015 Mike Kavouras. All rights reserved.
 //
 
-#import "CategoryTableViewController.h"
+#import "OptionSelectionTableViewController.h"
 
-@interface CategoryTableViewController ()
+@interface OptionSelectionTableViewController ()
 
 @end
 
-@implementation CategoryTableViewController
+@implementation OptionSelectionTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

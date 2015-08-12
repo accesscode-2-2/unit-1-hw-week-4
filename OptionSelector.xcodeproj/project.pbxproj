@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42F300BC1B7A782500FD7DA6 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F300BB1B7A782500FD7DA6 /* CategoryTableViewController.m */; };
-		42F300BF1B7A78A900FD7DA6 /* CategoryOptionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F300BE1B7A78A900FD7DA6 /* CategoryOptionsTableViewController.m */; };
+		4250F2C11B7AEB92009CBF9E /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 4250F2C01B7AEB92009CBF9E /* Categories.m */; };
+		4250F2CD1B7AEC8B009CBF9E /* CategorySetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4250F2CC1B7AEC8B009CBF9E /* CategorySetup.m */; };
+		4250F2D01B7AED11009CBF9E /* CategoryMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4250F2CF1B7AED11009CBF9E /* CategoryMain.m */; };
+		4250F2D31B7AED4F009CBF9E /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4250F2D21B7AED4F009CBF9E /* CategoryTableViewController.m */; };
+		4250F2D61B7AED9C009CBF9E /* ThreeCategoryOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4250F2D51B7AED9C009CBF9E /* ThreeCategoryOptions.m */; };
+		4250F2D91B7AEE1D009CBF9E /* OptionSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4250F2D81B7AEE1D009CBF9E /* OptionSelectionTableViewController.m */; };
 		8DECE7921B78082B0064D760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7911B78082B0064D760 /* main.m */; };
 		8DECE7951B78082B0064D760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7941B78082B0064D760 /* AppDelegate.m */; };
 		8DECE79B1B78082B0064D760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE7991B78082B0064D760 /* Main.storyboard */; };
@@ -28,10 +32,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		42F300BA1B7A782500FD7DA6 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
-		42F300BB1B7A782500FD7DA6 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
-		42F300BD1B7A78A900FD7DA6 /* CategoryOptionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryOptionsTableViewController.h; sourceTree = "<group>"; };
-		42F300BE1B7A78A900FD7DA6 /* CategoryOptionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryOptionsTableViewController.m; sourceTree = "<group>"; };
+		4250F2BF1B7AEB92009CBF9E /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		4250F2C01B7AEB92009CBF9E /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
+		4250F2CB1B7AEC8B009CBF9E /* CategorySetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategorySetup.h; sourceTree = "<group>"; };
+		4250F2CC1B7AEC8B009CBF9E /* CategorySetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategorySetup.m; sourceTree = "<group>"; };
+		4250F2CE1B7AED11009CBF9E /* CategoryMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryMain.h; sourceTree = "<group>"; };
+		4250F2CF1B7AED11009CBF9E /* CategoryMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryMain.m; sourceTree = "<group>"; };
+		4250F2D11B7AED4F009CBF9E /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
+		4250F2D21B7AED4F009CBF9E /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
+		4250F2D41B7AED9C009CBF9E /* ThreeCategoryOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeCategoryOptions.h; sourceTree = "<group>"; };
+		4250F2D51B7AED9C009CBF9E /* ThreeCategoryOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeCategoryOptions.m; sourceTree = "<group>"; };
+		4250F2D71B7AEE1D009CBF9E /* OptionSelectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionSelectionTableViewController.h; sourceTree = "<group>"; };
+		4250F2D81B7AEE1D009CBF9E /* OptionSelectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionSelectionTableViewController.m; sourceTree = "<group>"; };
 		8DECE78C1B78082B0064D760 /* OptionSelector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptionSelector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DECE7901B78082B0064D760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DECE7911B78082B0064D760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,10 +98,18 @@
 			children = (
 				8DECE7931B78082B0064D760 /* AppDelegate.h */,
 				8DECE7941B78082B0064D760 /* AppDelegate.m */,
-				42F300BA1B7A782500FD7DA6 /* CategoryTableViewController.h */,
-				42F300BB1B7A782500FD7DA6 /* CategoryTableViewController.m */,
-				42F300BD1B7A78A900FD7DA6 /* CategoryOptionsTableViewController.h */,
-				42F300BE1B7A78A900FD7DA6 /* CategoryOptionsTableViewController.m */,
+				4250F2BF1B7AEB92009CBF9E /* Categories.h */,
+				4250F2C01B7AEB92009CBF9E /* Categories.m */,
+				4250F2D41B7AED9C009CBF9E /* ThreeCategoryOptions.h */,
+				4250F2D51B7AED9C009CBF9E /* ThreeCategoryOptions.m */,
+				4250F2CB1B7AEC8B009CBF9E /* CategorySetup.h */,
+				4250F2CC1B7AEC8B009CBF9E /* CategorySetup.m */,
+				4250F2CE1B7AED11009CBF9E /* CategoryMain.h */,
+				4250F2CF1B7AED11009CBF9E /* CategoryMain.m */,
+				4250F2D11B7AED4F009CBF9E /* CategoryTableViewController.h */,
+				4250F2D21B7AED4F009CBF9E /* CategoryTableViewController.m */,
+				4250F2D71B7AEE1D009CBF9E /* OptionSelectionTableViewController.h */,
+				4250F2D81B7AEE1D009CBF9E /* OptionSelectionTableViewController.m */,
 				8DECE7991B78082B0064D760 /* Main.storyboard */,
 				8DECE79C1B78082B0064D760 /* Images.xcassets */,
 				8DECE79E1B78082B0064D760 /* LaunchScreen.xib */,
@@ -224,9 +244,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42F300BF1B7A78A900FD7DA6 /* CategoryOptionsTableViewController.m in Sources */,
 				8DECE7951B78082B0064D760 /* AppDelegate.m in Sources */,
-				42F300BC1B7A782500FD7DA6 /* CategoryTableViewController.m in Sources */,
+				4250F2D31B7AED4F009CBF9E /* CategoryTableViewController.m in Sources */,
+				4250F2D01B7AED11009CBF9E /* CategoryMain.m in Sources */,
+				4250F2CD1B7AEC8B009CBF9E /* CategorySetup.m in Sources */,
+				4250F2D61B7AED9C009CBF9E /* ThreeCategoryOptions.m in Sources */,
+				4250F2D91B7AEE1D009CBF9E /* OptionSelectionTableViewController.m in Sources */,
+				4250F2C11B7AEB92009CBF9E /* Categories.m in Sources */,
 				8DECE7921B78082B0064D760 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
