@@ -28,12 +28,12 @@
     return categoryManager;
 }
 
-- (instancetype)init {
-    if (self = [super init]) {
-        self.categoryBuild = [[CategoryMain alloc] init];
-        self.categoryManager = [self.categoryBuild];
-    }
-    return self;
-}
+//- (instancetype)init {
+//    if (self = [super init]) {
+//        self.categoryBuild = [[CategoryMain alloc] init];
+//        self.categories = [self.categoryBuild get  ];
+//    }
+//    return self;
+//}
 
 @end
