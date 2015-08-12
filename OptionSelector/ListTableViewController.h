@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CQCategory2.h"
 
-@interface ListTableViewController : UITableViewController
+@interface ListTableViewController : UITableViewController <UITableViewDelegate>
+
+//@property (nonatomic) NSString *shadeName;
+
+@property (nonatomic) CQCategory2 *basic;
 
 @end

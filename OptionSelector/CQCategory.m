@@ -76,9 +76,9 @@
                         ];
     
     self.colors = @{
-                    @"Red" : self.redShades,
-                    @"Yellow" : self.yellowShades,
-                    @"Blue" : self.blueShades
+                    @"Shades of Red" : self.redShades,
+                    @"Shades of Yellow" : self.yellowShades,
+                    @"Shades of Blue" : self.blueShades
                     };
     
 }

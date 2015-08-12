@@ -7,8 +7,15 @@
 //
 
 #import "CategoriesRootViewTableViewController.h"
+#import "CQCategory.h"
+#import "ListTableViewController.h"
+#import "CQCategory2.h"
 
 @interface CategoriesRootViewTableViewController ()
+
+@property (nonatomic)CQCategory *model;
+
+@property (nonatomic)NSArray *data;
 
 @end
 
@@ -17,84 +24,134 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    CQCategory2 *red = [[CQCategory2 alloc] init];
+    CQCategory2 *yellow = [[CQCategory2 alloc] init];
+    CQCategory2 *blue = [[CQCategory2 alloc] init];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    red.selected = @"";
+    yellow.selected = @"";
+    blue.selected = @"";
+    
+    red.name = @"Red";
+    yellow.name = @"Yellow";
+    blue.name = @"Blue";
+    
+    red.detailTitle = @"Shades of Red";
+    yellow.detailTitle = @"Shades of Yellow";
+    blue.detailTitle = @"Shades of Blue";
+    
+    red.options = @[@"cherry",
+                    @"rose",
+                    @"jam",
+                    @"merlot",
+                    @"garnet",
+                    @"crimson",
+                    @"ruby",
+                    @"scarlet",
+                    @"wine",
+                    @"brick",
+                    @"apple",
+                    @"mahogany",
+                    @"blood",
+                    @"sangria",
+                    @"berry",
+                    @"currant",
+                    @"blush",
+                    @"candy",
+                    @"lipstick"
+                    ];
+    
+    yellow.options = @[@"canary",
+                       @"gold",
+                       @"daffodil",
+                       @"flaxen",
+                       @"butter",
+                       @"lemon",
+                       @"mustard",
+                       @"corn",
+                       @"medallion",
+                       @"dandelion",
+                       @"fire",
+                       @"bumblebee",
+                       @"banana",
+                       @"butterscotch",
+                       @"dijon",
+                       @"honey",
+                       @"blonde",
+                       @"pineapple",
+                       @"tuscan sun"
+                       ];
+    
+    blue.options = @[@"slate",
+                     @"sky",
+                     @"navy",
+                     @"indigo",
+                     @"cobalt",
+                     @"teal",
+                     @"ocean",
+                     @"peacock",
+                     @"azure",
+                     @"cerulean",
+                     @"lapis",
+                     @"spruce",
+                     @"stone",
+                     @"aegean",
+                     @"berry",
+                     @"denim",
+                     @"admiral",
+                     @"sapphire"
+                     ];
+    
+    self.data = @[red, yellow, blue];
+    
+    self.navigationItem.title = @"Basics";
+    
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+
+    return self.data.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ColorThesaurusIdentifier" forIndexPath:indexPath];
     
-    // Configure the cell...
+    CQCategory2 *c = self.data [indexPath.row];
+    
+    cell.textLabel.text = c.name;
+    
+    cell.detailTextLabel.text = c.selected;
+    
+//    if ([c.selected isEqualToString:@"yes"]) {
+//        
+//        cell.detailTextLabel.text = @"woohoo!";
+//    
+//        //cell.detailTextLabel.text = c.options[indexPath.row];
+//    }
+    
+    
+
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    
+    ListTableViewController *listOfShadesViewController = segue.destinationViewController;
+    listOfShadesViewController.basic = self.data[indexPath.row];
+    
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
