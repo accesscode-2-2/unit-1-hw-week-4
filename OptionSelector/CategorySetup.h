@@ -8,6 +8,9 @@
 
 #import "Categories.h"
 
+
 @interface CategorySetup : Categories
+
+- (NSArray *)getCategories;
 
 @end

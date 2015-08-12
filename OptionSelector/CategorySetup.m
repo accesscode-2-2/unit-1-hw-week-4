@@ -7,7 +7,33 @@
 //
 
 #import "CategorySetup.h"
+#import "Countries.h"
+#import "Food.h"
+#import "Shoes.h"
+
+@interface CategorySetup ()
+
+@property (nonatomic) NSArray *categories;
+
+@end
 
 @implementation CategorySetup
+
+- (instancetype)init {
+    if (self = [super init]) {
+        Countries *countries = [[Countries alloc] init];
+        Food *food = [[Food alloc] init];
+        Shoes *shoes = [[Shoes alloc] init];
+        
+        for (Categories *threeCategories in self.categories) {
+            threeCategories.selection = @"";
+        }
+    }
+    return self;
+}
+
+- (NSArray *)getCategories {
+    return self.categories;
+}
 
 @end

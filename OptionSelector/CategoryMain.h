@@ -10,4 +10,7 @@
 
 @interface CategoryMain : Categories
 
+@property (nonatomic) NSArray *categories;
++ (instancetype) categoryManager;
+
 @end

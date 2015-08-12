@@ -10,4 +10,12 @@
 
 @implementation Countries
 
+- (instancetype)init {
+    if (self = [super init]) {
+        self.choice = @[@"South Korea", @"France", @"Japan", @"Spain", @"Maine", @"California"];
+        self.name = @"Places";
+    }
+    return self;
+}
+
 @end

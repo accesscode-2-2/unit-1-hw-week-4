@@ -10,4 +10,12 @@
 
 @implementation Food
 
+- (instancetype)init {
+    if (self = [super init]) {
+        self.choice = @[@"Pizza", @"Pasta", @"Linguine", @"Ravioli", @"Krabby Patty", @"Rainbow Patty"];
+        self.name = @"Food";
+    }
+    return self;
+}
+
 @end
