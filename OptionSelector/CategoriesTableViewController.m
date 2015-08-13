@@ -12,7 +12,6 @@
 
 @interface CategoriesTableViewController ()
 
-//@property (nonatomic) CQCategory *model;
 @property (nonatomic) NSArray *categories;
 
 @end
