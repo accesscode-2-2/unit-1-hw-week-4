@@ -48,7 +48,7 @@
                      @"Bahn Mi & Thai Iced Tea",
                      @"Lobster rolls",
                      @"Wings & beer",
-                     @"Doughnut Plant",
+                     @"Doughnut Plant donuts",
                      @"Go Go Curry"
                 ];
     food.selection = @" ";
@@ -79,7 +79,7 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    [self.tableView reloadData];
+    [self.tableView reloadData];                //reloads data to show the selection in cell detail
 }
 
 #pragma mark - Table view data source
@@ -100,12 +100,11 @@
     
     cell.textLabel.text = thisCategory.name; //uses name property as label of string
    
-    if (thisCategory.selection.length == 0){
-        cell.detailTextLabel.text = @" ";
-    } else {
-    cell.detailTextLabel.text = thisCategory.selection;
-    }
-    
+        if (thisCategory.selection.length == 0){
+            cell.detailTextLabel.text = @" ";
+        } else {
+            cell.detailTextLabel.text = thisCategory.selection;
+        }
     return cell;
 }
 

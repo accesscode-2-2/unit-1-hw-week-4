@@ -45,21 +45,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    // gives us checkmarks
+    // gives us checkmarks. this code was pulled from stack overflow.
+    
+
     
     if(self.checkedIndexPath)
     {
         UITableViewCell* uncheckCell = [tableView cellForRowAtIndexPath:self.checkedIndexPath];
         uncheckCell.accessoryType = UITableViewCellAccessoryNone;
+
     }
     UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     
     self.checkedIndexPath = indexPath;
     
-    // passing data to first array
+    // assigning a string to selection variable
     
     self.optionsCategory.selection = [self.optionsCategory.options objectAtIndex:indexPath.row];
+    
+    
+// !!!  STILL NEED: code to save the check mark in the indexPath.row selected !!!
     
     
 }
