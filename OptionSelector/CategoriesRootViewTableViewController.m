@@ -7,13 +7,15 @@
 //
 
 #import "CategoriesRootViewTableViewController.h"
-#import "CQCategory.h"
 #import "ListTableViewController.h"
 #import "CQCategory.h"
+#import "CQShadesData.h"
+
+
 
 @interface CategoriesRootViewTableViewController () <ListTableViewControllerDelegate>
 
-@property (nonatomic)CQCategory *model;
+@property (nonatomic)CQShadesData *model;
 
 @property (nonatomic)NSArray *data;
 
@@ -24,85 +26,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CQCategory *red = [[CQCategory alloc] init];
-    CQCategory *yellow = [[CQCategory alloc] init];
-    CQCategory *blue = [[CQCategory alloc] init];
-
-//    red.selected = @"";
-//    yellow.selected = @"";
-//    blue.selected = @"";
+    self.model = [[CQShadesData alloc] init];
     
-    red.name = @"Red";
-    yellow.name = @"Yellow";
-    blue.name = @"Blue";
+    [self.model initializeData];
     
-    red.detailTitle = @"Shades of Red";
-    yellow.detailTitle = @"Shades of Yellow";
-    blue.detailTitle = @"Shades of Blue";
-    
-    red.options = @[@"cherry",
-                    @"rose",
-                    @"jam",
-                    @"merlot",
-                    @"garnet",
-                    @"crimson",
-                    @"ruby",
-                    @"scarlet",
-                    @"wine",
-                    @"brick",
-                    @"apple",
-                    @"mahogany",
-                    @"blood",
-                    @"sangria",
-                    @"berry",
-                    @"currant",
-                    @"blush",
-                    @"candy",
-                    @"lipstick"
-                    ];
-    
-    yellow.options = @[@"canary",
-                       @"gold",
-                       @"daffodil",
-                       @"flaxen",
-                       @"butter",
-                       @"lemon",
-                       @"mustard",
-                       @"corn",
-                       @"medallion",
-                       @"dandelion",
-                       @"fire",
-                       @"bumblebee",
-                       @"banana",
-                       @"butterscotch",
-                       @"dijon",
-                       @"honey",
-                       @"blonde",
-                       @"pineapple",
-                       @"tuscan sun"
-                       ];
-    
-    blue.options = @[@"slate",
-                     @"sky",
-                     @"navy",
-                     @"indigo",
-                     @"cobalt",
-                     @"teal",
-                     @"ocean",
-                     @"peacock",
-                     @"azure",
-                     @"cerulean",
-                     @"lapis",
-                     @"spruce",
-                     @"stone",
-                     @"aegean",
-                     @"berry",
-                     @"denim",
-                     @"admiral",
-                     @"sapphire"
-                     ];
-    
-    self.data = @[red, yellow, blue];
+    self.data = @[self.model.red, self.model.yellow, self.model.blue];
     
     self.navigationItem.title = @"Basics";
     
@@ -128,16 +56,22 @@
     
     cell.textLabel.text = c.name;
     
-    //If we didn't set an initial text on the detail label then the label would have 0 width/0 height...??
+    //If there was no initial text on the detailTextLabel then the label would have 0 width/0 height, thereby making the detailTextLabel non-existent.  Not sure why this was happening...
     //By setting an empty space as default it sizes correctly
     
     if (c.selected) {
         NSLog(@"Valid selected value");
         cell.detailTextLabel.text = c.selected;
+        cell.backgroundColor = c.selectedShade;
+        cell.textLabel.textColor = [UIColor lightGrayColor];
     } else {
         cell.detailTextLabel.text = @" ";
+
     }
-    
+
+    //Maybe I'll change the font?...Not sure to what yet.
+//    UIFont *myFont = [ UIFont fontWithName: @"" size: 25.0 ];
+//    cell.textLabel.font  = myFont;
     
     return cell;
 }
@@ -154,10 +88,11 @@
 
 #pragma ListTableViewControllerDelegate
 
--(void) didSelectShade: (NSString *)shade atIndexPath: (NSIndexPath *) indexPath{
+-(void) didSelectShade: (NSString *)shade withColor: (UIColor *)color atIndexPath: (NSIndexPath *) indexPath{
     
     
     ((CQCategory *) self.data[indexPath.row]).selected = shade;
+    ((CQCategory *) self.data[indexPath.row]).selectedShade = color;
     
     [self.tableView reloadData];
     

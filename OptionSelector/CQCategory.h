@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface CQCategory : NSObject
 
@@ -14,5 +15,7 @@
 @property (nonatomic) NSString *detailTitle;
 @property (nonatomic) NSArray *options;
 @property (nonatomic) NSString *selected;
+@property (nonatomic) UIColor *selectedShade;
+@property (nonatomic) NSArray *shadeColors;
 
 @end

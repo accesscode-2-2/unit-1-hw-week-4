@@ -11,7 +11,7 @@
 
 @protocol ListTableViewControllerDelegate <NSObject>
 
--(void) didSelectShade: (NSString *)shade atIndexPath: (NSIndexPath *) indexPath;
+-(void) didSelectShade: (NSString *)shade withColor: (UIColor *)color atIndexPath: (NSIndexPath *) indexPath;
 
 @end
 

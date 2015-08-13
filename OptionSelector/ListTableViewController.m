@@ -52,7 +52,13 @@
     
     NSArray *listOfShades = self.basic.options;
     NSString *selectedShade = listOfShades [indexPath.row];
-    [self.delegate didSelectShade:selectedShade atIndexPath: self.selectedBasicIndexPath];
+    
+    NSArray *colorOfShades = self.basic.shadeColors;
+    UIColor *selectedColor = colorOfShades [indexPath.row];
+    
+    cell.contentView.backgroundColor = selectedColor;
+    
+    [self.delegate didSelectShade:selectedShade withColor:selectedColor atIndexPath: self.selectedBasicIndexPath];
     
     NSLog(@"Selected: %@", selectedShade);
     
@@ -65,6 +71,8 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     cell.accessoryType = UITableViewCellAccessoryNone;
+    
+    cell.contentView.backgroundColor = [UIColor whiteColor];
 
 }
 
