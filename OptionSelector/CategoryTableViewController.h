@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "OptionSelectionTableViewController.h"
 
-@interface CategoryTableViewController : UITableViewController
+@interface CategoryTableViewController : UITableViewController <OptionSelectionTableViewControllerDelegate>
 
 @end

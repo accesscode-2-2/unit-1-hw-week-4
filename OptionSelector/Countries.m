@@ -12,7 +12,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        self.choice = @[@"South Korea", @"France", @"Japan", @"Spain", @"Maine", @"California"];
+        self.choices = @[@"South Korea", @"France", @"Japan", @"Spain", @"Paraguay", @"Guam"];
         self.name = @"Places";
     }
     return self;

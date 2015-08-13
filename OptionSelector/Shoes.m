@@ -12,7 +12,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        self.choice = @[@"Nike", @"Saucony", @"Adidas", @"Reebok", @"Timberland", @"Uggs"];
+        self.choices = @[@"Nike", @"Saucony", @"Adidas", @"Reebok", @"Timberland", @"Uggs"];
         self.name = @"Shoes";
     }
     return self;

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "OptionSelectionTableViewControllerDelegate.h"
 
-@interface OptionSelectionTableViewController : UITableViewController <OptionSelectionTableViewControllerDelegate>
+@interface OptionSelectionTableViewController : UITableViewController
 
 @property (nonatomic, weak) id<OptionSelectionTableViewControllerDelegate> delegate;
 @property (nonatomic) NSUInteger categoryIndex;

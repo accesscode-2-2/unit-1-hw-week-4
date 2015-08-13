@@ -11,6 +11,6 @@
 @interface Categories : NSObject
 
 @property (nonatomic) NSString *name;
-@property (nonatomic) NSArray *choice;
+@property (nonatomic) NSArray *choices;
 @property (nonatomic) NSString *selection;
 @end
