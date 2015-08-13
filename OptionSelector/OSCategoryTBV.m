@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"Categories";
+    
     self.allCategories = [[NSMutableArray alloc]init]; //important. initialize the NSMutableArray or nothing appears when view loads
     
     CQCategory * buddies = [[CQCategory alloc] init]; //initialize instance of CQCategory class
