@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		8DECE7921B78082B0064D760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7911B78082B0064D760 /* main.m */; };
 		8DECE7951B78082B0064D760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7941B78082B0064D760 /* AppDelegate.m */; };
-		8DECE7981B78082B0064D760 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7971B78082B0064D760 /* ViewController.m */; };
 		8DECE79B1B78082B0064D760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE7991B78082B0064D760 /* Main.storyboard */; };
 		8DECE79D1B78082B0064D760 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE79C1B78082B0064D760 /* Images.xcassets */; };
 		8DECE7A01B78082B0064D760 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE79E1B78082B0064D760 /* LaunchScreen.xib */; };
 		8DECE7AC1B78082B0064D760 /* OptionSelectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7AB1B78082B0064D760 /* OptionSelectorTests.m */; };
+		9AA50B991B7CEB0A00B368DF /* OSCategoryTBV.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA50B981B7CEB0A00B368DF /* OSCategoryTBV.m */; };
+		9AA50B9C1B7CEB2F00B368DF /* OSOptionsTBV.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA50B9B1B7CEB2F00B368DF /* OSOptionsTBV.m */; };
+		9AA50B9F1B7CECE900B368DF /* CQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA50B9E1B7CECE900B368DF /* CQCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,18 @@
 		8DECE7911B78082B0064D760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DECE7931B78082B0064D760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DECE7941B78082B0064D760 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8DECE7961B78082B0064D760 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8DECE7971B78082B0064D760 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8DECE79A1B78082B0064D760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DECE79C1B78082B0064D760 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8DECE79F1B78082B0064D760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8DECE7A51B78082B0064D760 /* OptionSelectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptionSelectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DECE7AA1B78082B0064D760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DECE7AB1B78082B0064D760 /* OptionSelectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OptionSelectorTests.m; sourceTree = "<group>"; };
+		9AA50B971B7CEB0A00B368DF /* OSCategoryTBV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCategoryTBV.h; sourceTree = "<group>"; };
+		9AA50B981B7CEB0A00B368DF /* OSCategoryTBV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCategoryTBV.m; sourceTree = "<group>"; };
+		9AA50B9A1B7CEB2F00B368DF /* OSOptionsTBV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSOptionsTBV.h; sourceTree = "<group>"; };
+		9AA50B9B1B7CEB2F00B368DF /* OSOptionsTBV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSOptionsTBV.m; sourceTree = "<group>"; };
+		9AA50B9D1B7CECE900B368DF /* CQCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQCategory.h; sourceTree = "<group>"; };
+		9AA50B9E1B7CECE900B368DF /* CQCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQCategory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +89,13 @@
 			children = (
 				8DECE7931B78082B0064D760 /* AppDelegate.h */,
 				8DECE7941B78082B0064D760 /* AppDelegate.m */,
-				8DECE7961B78082B0064D760 /* ViewController.h */,
-				8DECE7971B78082B0064D760 /* ViewController.m */,
 				8DECE7991B78082B0064D760 /* Main.storyboard */,
+				9AA50B9D1B7CECE900B368DF /* CQCategory.h */,
+				9AA50B9E1B7CECE900B368DF /* CQCategory.m */,
+				9AA50B971B7CEB0A00B368DF /* OSCategoryTBV.h */,
+				9AA50B981B7CEB0A00B368DF /* OSCategoryTBV.m */,
+				9AA50B9A1B7CEB2F00B368DF /* OSOptionsTBV.h */,
+				9AA50B9B1B7CEB2F00B368DF /* OSOptionsTBV.m */,
 				8DECE79C1B78082B0064D760 /* Images.xcassets */,
 				8DECE79E1B78082B0064D760 /* LaunchScreen.xib */,
 				8DECE78F1B78082B0064D760 /* Supporting Files */,
@@ -219,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DECE7981B78082B0064D760 /* ViewController.m in Sources */,
 				8DECE7951B78082B0064D760 /* AppDelegate.m in Sources */,
+				9AA50B991B7CEB0A00B368DF /* OSCategoryTBV.m in Sources */,
+				9AA50B9F1B7CECE900B368DF /* CQCategory.m in Sources */,
 				8DECE7921B78082B0064D760 /* main.m in Sources */,
+				9AA50B9C1B7CEB2F00B368DF /* OSOptionsTBV.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +430,7 @@
 				8DECE7B11B78082B0064D760 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DECE7B21B78082B0064D760 /* Build configuration list for PBXNativeTarget "OptionSelectorTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +439,7 @@
 				8DECE7B41B78082B0064D760 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
