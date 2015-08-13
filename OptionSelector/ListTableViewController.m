@@ -50,11 +50,9 @@
     
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     
-    [cell setSelected:TRUE animated:TRUE];
-    
-    NSString *selectedShade = cell.textLabel.text;
-    
-    self.basic.selected = selectedShade;
+    NSArray *listOfShades = self.basic.options;
+    NSString *selectedShade = listOfShades [indexPath.row];
+    [self.delegate didSelectShade:selectedShade atIndexPath: self.selectedBasicIndexPath];
     
     NSLog(@"Selected: %@", selectedShade);
     
@@ -67,12 +65,6 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     cell.accessoryType = UITableViewCellAccessoryNone;
-    
-    [cell setSelected:FALSE animated:FALSE];
-    
-    self.basic.selected = cell.textLabel.text;
-    
-    NSLog(@"DEselected: %@", self.basic.selected);
 
 }
 

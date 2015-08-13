@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B9A63F41B7A9D4E0025CD30 /* CategoriesRootViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A63F31B7A9D4E0025CD30 /* CategoriesRootViewTableViewController.m */; };
 		6B9A63F71B7A9DA20025CD30 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A63F61B7A9DA20025CD30 /* ListTableViewController.m */; };
-		6B9A63FA1B7A9DD30025CD30 /* CQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A63F91B7A9DD30025CD30 /* CQCategory.m */; };
-		6BB571A31B7ADDBB0065EE52 /* CQCategory2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB571A21B7ADDBB0065EE52 /* CQCategory2.m */; };
+		6BB571A31B7ADDBB0065EE52 /* CQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB571A21B7ADDBB0065EE52 /* CQCategory.m */; };
 		8DECE7921B78082B0064D760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7911B78082B0064D760 /* main.m */; };
 		8DECE7951B78082B0064D760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7941B78082B0064D760 /* AppDelegate.m */; };
 		8DECE79B1B78082B0064D760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE7991B78082B0064D760 /* Main.storyboard */; };
@@ -34,10 +33,8 @@
 		6B9A63F31B7A9D4E0025CD30 /* CategoriesRootViewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesRootViewTableViewController.m; sourceTree = "<group>"; };
 		6B9A63F51B7A9DA20025CD30 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
 		6B9A63F61B7A9DA20025CD30 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
-		6B9A63F81B7A9DD30025CD30 /* CQCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQCategory.h; sourceTree = "<group>"; };
-		6B9A63F91B7A9DD30025CD30 /* CQCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQCategory.m; sourceTree = "<group>"; };
-		6BB571A11B7ADDBB0065EE52 /* CQCategory2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQCategory2.h; sourceTree = "<group>"; };
-		6BB571A21B7ADDBB0065EE52 /* CQCategory2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQCategory2.m; sourceTree = "<group>"; };
+		6BB571A11B7ADDBB0065EE52 /* CQCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQCategory.h; sourceTree = "<group>"; };
+		6BB571A21B7ADDBB0065EE52 /* CQCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQCategory.m; sourceTree = "<group>"; };
 		8DECE78C1B78082B0064D760 /* OptionSelector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptionSelector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DECE7901B78082B0064D760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DECE7911B78082B0064D760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,10 +89,8 @@
 			children = (
 				8DECE7931B78082B0064D760 /* AppDelegate.h */,
 				8DECE7941B78082B0064D760 /* AppDelegate.m */,
-				6B9A63F81B7A9DD30025CD30 /* CQCategory.h */,
-				6B9A63F91B7A9DD30025CD30 /* CQCategory.m */,
-				6BB571A11B7ADDBB0065EE52 /* CQCategory2.h */,
-				6BB571A21B7ADDBB0065EE52 /* CQCategory2.m */,
+				6BB571A11B7ADDBB0065EE52 /* CQCategory.h */,
+				6BB571A21B7ADDBB0065EE52 /* CQCategory.m */,
 				6B9A63F21B7A9D4E0025CD30 /* CategoriesRootViewTableViewController.h */,
 				6B9A63F31B7A9D4E0025CD30 /* CategoriesRootViewTableViewController.m */,
 				6B9A63F51B7A9DA20025CD30 /* ListTableViewController.h */,
@@ -236,8 +231,7 @@
 			files = (
 				8DECE7951B78082B0064D760 /* AppDelegate.m in Sources */,
 				6B9A63F41B7A9D4E0025CD30 /* CategoriesRootViewTableViewController.m in Sources */,
-				6BB571A31B7ADDBB0065EE52 /* CQCategory2.m in Sources */,
-				6B9A63FA1B7A9DD30025CD30 /* CQCategory.m in Sources */,
+				6BB571A31B7ADDBB0065EE52 /* CQCategory.m in Sources */,
 				8DECE7921B78082B0064D760 /* main.m in Sources */,
 				6B9A63F71B7A9DA20025CD30 /* ListTableViewController.m in Sources */,
 			);

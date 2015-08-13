@@ -10,13 +10,9 @@
 
 @interface CQCategory : NSObject
 
-@property (nonatomic) NSDictionary *colors;
-@property (nonatomic) NSArray *redShades;
-@property (nonatomic) NSArray *yellowShades;
-@property (nonatomic) NSArray *blueShades;
-
-@property (nonatomic) NSString *selection;
-
--(void)initializeData;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *detailTitle;
+@property (nonatomic) NSArray *options;
+@property (nonatomic) NSString *selected;
 
 @end

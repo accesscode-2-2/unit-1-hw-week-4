@@ -7,12 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CQCategory2.h"
+#import "CQCategory.h"
+
+@protocol ListTableViewControllerDelegate <NSObject>
+
+-(void) didSelectShade: (NSString *)shade atIndexPath: (NSIndexPath *) indexPath;
+
+@end
 
 @interface ListTableViewController : UITableViewController <UITableViewDelegate>
 
-//@property (nonatomic) NSString *shadeName;
+@property (nonatomic) CQCategory *basic;
+@property (nonatomic, weak) id<ListTableViewControllerDelegate> delegate;
 
-@property (nonatomic) CQCategory2 *basic;
+@property (nonatomic) NSIndexPath *selectedBasicIndexPath;
 
 @end
+

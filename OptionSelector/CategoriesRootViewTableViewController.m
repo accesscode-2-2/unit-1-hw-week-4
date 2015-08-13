@@ -9,9 +9,9 @@
 #import "CategoriesRootViewTableViewController.h"
 #import "CQCategory.h"
 #import "ListTableViewController.h"
-#import "CQCategory2.h"
+#import "CQCategory.h"
 
-@interface CategoriesRootViewTableViewController ()
+@interface CategoriesRootViewTableViewController () <ListTableViewControllerDelegate>
 
 @property (nonatomic)CQCategory *model;
 
@@ -24,13 +24,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CQCategory2 *red = [[CQCategory2 alloc] init];
-    CQCategory2 *yellow = [[CQCategory2 alloc] init];
-    CQCategory2 *blue = [[CQCategory2 alloc] init];
-    
-    red.selected = @"";
-    yellow.selected = @"";
-    blue.selected = @"";
+    CQCategory *red = [[CQCategory alloc] init];
+    CQCategory *yellow = [[CQCategory alloc] init];
+    CQCategory *blue = [[CQCategory alloc] init];
+
+//    red.selected = @"";
+//    yellow.selected = @"";
+//    blue.selected = @"";
     
     red.name = @"Red";
     yellow.name = @"Yellow";
@@ -124,21 +124,20 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ColorThesaurusIdentifier" forIndexPath:indexPath];
     
-    CQCategory2 *c = self.data [indexPath.row];
+    CQCategory *c = self.data [indexPath.row];
     
     cell.textLabel.text = c.name;
     
-    cell.detailTextLabel.text = c.selected;
+    //If we didn't set an initial text on the detail label then the label would have 0 width/0 height...??
+    //By setting an empty space as default it sizes correctly
     
-//    if ([c.selected isEqualToString:@"yes"]) {
-//        
-//        cell.detailTextLabel.text = @"woohoo!";
-//    
-//        //cell.detailTextLabel.text = c.options[indexPath.row];
-//    }
+    if (c.selected) {
+        NSLog(@"Valid selected value");
+        cell.detailTextLabel.text = c.selected;
+    } else {
+        cell.detailTextLabel.text = @" ";
+    }
     
-    
-
     
     return cell;
 }
@@ -149,9 +148,21 @@
     
     ListTableViewController *listOfShadesViewController = segue.destinationViewController;
     listOfShadesViewController.basic = self.data[indexPath.row];
-    
+    listOfShadesViewController.selectedBasicIndexPath = indexPath;
+    listOfShadesViewController.delegate = self;
 }
 
+#pragma ListTableViewControllerDelegate
+
+-(void) didSelectShade: (NSString *)shade atIndexPath: (NSIndexPath *) indexPath{
+    
+    
+    ((CQCategory *) self.data[indexPath.row]).selected = shade;
+    
+    [self.tableView reloadData];
+    
+    NSLog(@"Did select shade: %@", shade);
+}
 
 
 @end
