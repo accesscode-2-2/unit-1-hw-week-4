@@ -7,6 +7,7 @@
 //
 
 #import "Categories.h"
+#import <Foundation/Foundation.h>
 
 @interface Food : Categories
 

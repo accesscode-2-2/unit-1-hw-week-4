@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface OptionSelectionTableViewControllerDelegate : NSObject
+@class OptionSelectionTableViewController;
 
+@protocol OptionSelectionTableViewControllerDelegate <NSObject>
+- (void)optionSelectionTableViewController:(OptionSelectionTableViewController *)tableViewController
+                      didSelectAnOption:(NSUInteger)cellIndex;
 @end

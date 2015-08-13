@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		424411B51B7BFCD80055A66A /* OptionSelectionTableViewControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 424411B41B7BFCD80055A66A /* OptionSelectionTableViewControllerDelegate.m */; };
 		4250F2C11B7AEB92009CBF9E /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 4250F2C01B7AEB92009CBF9E /* Categories.m */; };
 		4250F2CD1B7AEC8B009CBF9E /* CategorySetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4250F2CC1B7AEC8B009CBF9E /* CategorySetup.m */; };
 		4250F2D01B7AED11009CBF9E /* CategoryMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4250F2CF1B7AED11009CBF9E /* CategoryMain.m */; };
@@ -39,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		424411B31B7BFCD80055A66A /* OptionSelectionTableViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionSelectionTableViewControllerDelegate.h; sourceTree = "<group>"; };
-		424411B41B7BFCD80055A66A /* OptionSelectionTableViewControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionSelectionTableViewControllerDelegate.m; sourceTree = "<group>"; };
 		4250F2BF1B7AEB92009CBF9E /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
 		4250F2C01B7AEB92009CBF9E /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
 		4250F2CB1B7AEC8B009CBF9E /* CategorySetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategorySetup.h; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 				4250F2D71B7AEE1D009CBF9E /* OptionSelectionTableViewController.h */,
 				4250F2D81B7AEE1D009CBF9E /* OptionSelectionTableViewController.m */,
 				424411B31B7BFCD80055A66A /* OptionSelectionTableViewControllerDelegate.h */,
-				424411B41B7BFCD80055A66A /* OptionSelectionTableViewControllerDelegate.m */,
 				8DECE7991B78082B0064D760 /* Main.storyboard */,
 				8DECE79C1B78082B0064D760 /* Images.xcassets */,
 				8DECE79E1B78082B0064D760 /* LaunchScreen.xib */,
@@ -262,7 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				424411B51B7BFCD80055A66A /* OptionSelectionTableViewControllerDelegate.m in Sources */,
 				4250F2E41B7AEF78009CBF9E /* Shoes.m in Sources */,
 				4250F2E21B7AEF78009CBF9E /* Food.m in Sources */,
 				8DECE7951B78082B0064D760 /* AppDelegate.m in Sources */,

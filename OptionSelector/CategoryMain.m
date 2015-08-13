@@ -11,7 +11,7 @@
 
 @interface CategoryMain ()
 
-@property (nonatomic) CategoryMain *categoryBuild;
+@property (nonatomic) CategorySetup *categoryBuild;
 
 @end
 
@@ -31,6 +31,7 @@
 - (instancetype)init {
     if (self = [super init]) {
         self.categoryBuild = [[CategorySetup alloc] init];
+        self.categories = [self.categoryBuild fetchCategories];
     }
     return self;
 }

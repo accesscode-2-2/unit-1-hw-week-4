@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OptionSelectionTableViewController.h"
 
-@interface CategoryTableViewController : UITableViewController <OptionSelectionTableViewController>
+@interface CategoryTableViewController : UITableViewController
 
 @end

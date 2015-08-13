@@ -24,9 +24,10 @@
         Countries *countries = [[Countries alloc] init];
         Food *food = [[Food alloc] init];
         Shoes *shoes = [[Shoes alloc] init];
+        self.categories = @[countries, food, shoes];
         
         for (Categories *threeCategories in self.categories) {
-            threeCategories.selection = @"";
+            threeCategories.selection = @" ";
         }
     }
     return self;

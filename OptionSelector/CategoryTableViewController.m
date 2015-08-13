@@ -52,8 +52,8 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
-    
-    
+}
+
     
     /*
      // Override to support conditional editing of the table view.
@@ -91,10 +91,15 @@
     
     
 #pragma mark - Navigation
-    
     - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
         
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        OptionSelectionTableViewController *optionSelectors = [segue destinationViewController];
+        optionSelectors.categoryIndex = indexPath.row;
+        optionSelectors.delegate = (id<OptionSelectionTableViewControllerDelegate>) self;
     }
-    
-    
+
+
+
     @end
