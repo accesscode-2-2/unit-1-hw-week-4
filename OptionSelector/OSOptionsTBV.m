@@ -42,7 +42,7 @@
     
     
     if ([self.optionsCategory.options[indexPath.row] isEqualToString:self.optionsCategory.selection]){
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        cell.accessoryType = UITableViewCellAccessoryCheckmark; // preserves checkmark
         self.checkedIndexPath = indexPath;
 
     }
