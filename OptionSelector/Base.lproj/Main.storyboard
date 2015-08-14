@@ -36,10 +36,13 @@
                             <outlet property="delegate" destination="Aoe-Q3-J9A" id="zby-KH-eg5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="oQl-72-tu8"/>
-                    <connections>
-                        <outlet property="saveSelection" destination="JkP-Qt-TSY" id="NxG-ca-9bq"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="oQl-72-tu8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2ze-up-jhV">
+                            <connections>
+                                <action selector="addButton:" destination="Aoe-Q3-J9A" id="ZTc-z4-YhW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZV-7a-fd5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
