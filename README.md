@@ -1,19 +1,33 @@
 # Option Selector
 
 #### Summary 
-Create a simple app with a few different categories (dogs, cars, food, planets, etc). When you tap on a category name it should take you into another `UITableViewController` with a list of possible options. Tapping on an option will show a checkmark at the right of the cell, and remove any other checkmarks on any other cells. When you navigate back to the initial `UITableViewController` you should see the option that you chose next in the corresponding cell. That is all.
 
-You may pick any categories that you want.
+This is an application that allows you to select your own video game from a genre you've selected on the previous screen. When you select a catergory or genre of games, for example, horror, adventure, or shooter, then it will take you to another screen. This new screen is a UITableViewController with a list of different games from that selected genere. Once a cell is tapped, a checkmark will appear on the right side of the cell, and tapping on another cell will remove the previous checkmark and show the new checkmark on the selected cell. Navigating back on the 'root' view controller that list the categories will now show the game corresponding to the cell.
+
+Example: 
 
 ![image](https://github.com/accesscode-2-2/unit-1/blob/master/lessons/week-4/images/options.gif?raw=true)
 
-### Organization
 
-This is a suggestion for how to organize your data.
 
-1. Each category is represented by a class. Each category class has 3 properties: name (NSString*), options (NSArray*), selection (NSString*)
-2. In your root `UITableViewController`, add a `property` that is an `NSArray` that can hold all of your category objects.
-3. In `prepareForSegue`, pass the category object to the other `UITableViewController`
+The MIT License
 
-### Process
- TBD
+Copyright (c) 2010-2015 Google, Inc. http://angularjs.org
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
