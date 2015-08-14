@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,6 +40,13 @@
     
     cell.textLabel.text = [self.optionsCategory.options objectAtIndex:indexPath.row]; //places each string in options array on cells
     
+    
+    if ([self.optionsCategory.options[indexPath.row] isEqualToString:self.optionsCategory.selection]){
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        self.checkedIndexPath = indexPath;
+
+    }
+    
     return cell;
 }
 
@@ -49,12 +57,11 @@
     
 
     
-    if(self.checkedIndexPath)
-    {
+    if(self.checkedIndexPath) {
         UITableViewCell* uncheckCell = [tableView cellForRowAtIndexPath:self.checkedIndexPath];
         uncheckCell.accessoryType = UITableViewCellAccessoryNone;
-
     }
+    
     UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     
@@ -63,6 +70,7 @@
     // assigning a string to selection variable
     
     self.optionsCategory.selection = [self.optionsCategory.options objectAtIndex:indexPath.row];
+    
     
     
 // !!!  STILL NEED: code to save the check mark in the indexPath.row selected !!!
