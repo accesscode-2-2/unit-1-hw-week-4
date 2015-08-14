@@ -44,6 +44,8 @@
     PastryCategories *donuts = [[PastryCategories alloc]init];
     [donuts setPastryName: @"Doughnut"];
     
+    
+    
     PastryCategories *jellybeans = [[PastryCategories alloc]init];
     [jellybeans setPastryName: @"JellyBeans"];
     
@@ -58,6 +60,8 @@
  
     
 }
+
+
 
 
 
@@ -93,6 +97,14 @@
     return cell;
 }
 
+#pragma Navigation
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"yourSegue" sender:self];
+    
+    NSLog(@"preparing");
+}
 
 
 

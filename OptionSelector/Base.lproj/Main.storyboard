@@ -35,9 +35,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZSD-cZ-SbB" id="tE3-qR-RgL">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="UyW-zC-Rds" kind="show" id="WWn-kB-MVn"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -46,6 +43,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Rb9-Ae-8eo"/>
+                    <connections>
+                        <segue destination="UyW-zC-Rds" kind="push" identifier="yourSegue" id="yIf-cG-WMv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekv-Ql-YWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,7 +54,7 @@
         <!--Table View Controller-->
         <scene sceneID="roo-Fg-Zwq">
             <objects>
-                <tableViewController id="UyW-zC-Rds" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="yourSegue" id="UyW-zC-Rds" customClass="POTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="p3s-Co-6vg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,10 +68,10 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="UyW-zC-Rds" id="vNz-ee-ZDM"/>
                             <outlet property="delegate" destination="UyW-zC-Rds" id="V4E-sW-mkJ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="kV1-b6-6GK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tlt-aD-Th2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
