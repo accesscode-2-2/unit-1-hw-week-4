@@ -46,7 +46,6 @@
     return cell;
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath   *)indexPath
 {
     // add check marks
@@ -67,7 +66,6 @@
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
         self.checkedIndexPath = indexPath;
 }
-
     // pass data back to first array
     self.category.selection = [self.category.options objectAtIndex:indexPath.row]; 
 }

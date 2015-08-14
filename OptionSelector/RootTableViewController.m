@@ -22,7 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CQCategory *category1 = [[CQCategory alloc]init];  // created instance of CQCategory class called *category1
+    self.title = @"LISTS OF THINGS!!"; // add a title
+    
+    CQCategory *category1 = [[CQCategory alloc]init];  // created instance of CQCategory class
     category1.name = @"Food"; // set properties
     category1.options = @[
                       @"Cheeseburger",
@@ -65,8 +67,7 @@
                          ];
     category3.selection = @"";
     
-    
-    // set array of categories
+    // Then, set the CQCategory instances into an array.
     self.categories = @[
                         category1,
                         category2,
@@ -78,7 +79,6 @@
 - (void) viewWillAppear:(BOOL)animated {
     [self.tableView reloadData]; // this reloads table view
     [super viewWillAppear:animated]; // added
-    
 }
 
 // set number of sections
@@ -86,17 +86,18 @@
     return 1;
 }
 
-// set number of rows
+// set number of rows in each section
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.categories.count; // rows = number of items in the categories...
+    return self.categories.count; // rows = number of items in my array
 }
 
-// populate table view cell(s)
+// populate table view cell(s), add reusablecellidentifier to main.storyboard/rootVC/cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RootTableViewIdentifier" forIndexPath:indexPath];
     
-    CQCategory *thisCategory = [self.categories objectAtIndex:indexPath.row]; // CQCategory, give me the general category, the indexes and the individual rows
-    cell.textLabel.text = thisCategory.name; // cell label text = the "names" of the index rows
+    CQCategory *thisCategory = [self.categories objectAtIndex:indexPath.row]; // create CQCategory instance that = the general categories, the indexes and each individual row
+    
+    cell.textLabel.text = thisCategory.name; // set text label on each cell to "thisCategory" (each individual row)
     
     if (thisCategory.selection.length == 0) { // this forces the cell to show the right label the first time...
         cell.detailTextLabel.text = @" ";
@@ -104,12 +105,7 @@
         cell.detailTextLabel.text = thisCategory.selection; // this adds selection info to main table view
     }
     
-    // insert if statement to connect check mark here
-
-    
-    
     return cell; // return the contents of each cell
-
 }
 
 // segue to next table view controller
