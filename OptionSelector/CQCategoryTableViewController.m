@@ -20,6 +20,42 @@
 
 @implementation CQCategoryTableViewController
 
+// need to add selected option into CQCategoryTableViewController
+- (IBAction)addButton:(UIBarButtonItem *)sender {
+    
+    // tutorial http://www.icodeblog.com/2008/10/03/iphone-programming-tutorial-savingretrieving-data-using-nsuserdefaults/
+    
+    // create NSArray named cells and set equal to table view's cells using visibleCells
+    NSArray *cells = [self.tableView visibleCells];
+    // create a for loop to loop through the cells.count, incrementing by 1 to check each cell
+    for (int i = 0; i < cells.count; i++) {
+        // store cell in a temporary variable within UITableViewCell
+        UITableViewCell *tmp = cells[i];
+        // first cell index = 0
+        if (i == 0) {
+            // NSUserDefaults: built in xcode to "call methods on it to save data"
+            /* example:
+            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+            saving an NSString
+            [prefs setObject:@"TextToSave" forKey:@"keyToLookupString"];
+             *setObject: (needs NSString input)
+             */
+            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+            // setObject to temp detail text labels
+            [prefs setObject:tmp.detailTextLabel.text forKey:@"cell1"];
+        }
+        else if (i == 1) {
+            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+            [prefs setObject:tmp.detailTextLabel.text forKey:@"cell2"];
+        }
+        else {
+            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+            [prefs setObject:tmp.detailTextLabel.text forKey:@"cell3"];
+        }
+    }
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -70,6 +106,7 @@
                        ];
     games.selection = @" ";
     
+    // add each array to the
     [self.category addObject:food];
     [self.category addObject:cars];
     [self.category addObject:games];

@@ -36,7 +36,14 @@
                             <outlet property="delegate" destination="Aoe-Q3-J9A" id="zby-KH-eg5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="oQl-72-tu8"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="oQl-72-tu8">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="6Di-QR-ux2">
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="addButton:" destination="Aoe-Q3-J9A" id="92R-vj-RpM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZV-7a-fd5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
