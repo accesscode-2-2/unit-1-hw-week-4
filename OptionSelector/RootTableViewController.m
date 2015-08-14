@@ -12,8 +12,7 @@
 
 @interface RootTableViewController ()
 
-//@property (nonatomic) NSDictionary *itemList; // property for dictionary list
-@property (nonatomic) NSArray *categories;
+@property (nonatomic) NSArray *categories; // for entire array of category data
 @property (nonatomic) NSInteger itemChosen;
 
 @end
@@ -22,7 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     
     CQCategory *category1 = [[CQCategory alloc]init];  // created instance of CQCategory class called *category1
     category1.name = @"Food"; // set properties
@@ -79,6 +77,8 @@
 // reload screen with new data
 - (void) viewWillAppear:(BOOL)animated {
     [self.tableView reloadData]; // this reloads table view
+    [super viewWillAppear:animated]; // added
+    
 }
 
 // set number of sections
@@ -105,6 +105,8 @@
     }
     
     // insert if statement to connect check mark here
+
+    
     
     return cell; // return the contents of each cell
 

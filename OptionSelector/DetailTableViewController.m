@@ -10,7 +10,6 @@
 
 @interface DetailTableViewController ()
 
-
 @end
 
 @implementation DetailTableViewController
@@ -18,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // set checked index path to initial value (needs to reference the selected option)
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,6 +38,11 @@
     
     NSString *optionName = [self.category.options objectAtIndex:indexPath.row]; // configure string to show in view
     cell.textLabel.text = optionName;
+    
+    if([self.category.options[indexPath.row] isEqualToString:self.category.selection]){ // added to retain selection
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        self.checkedIndexPath = indexPath; // added: only one checkmark is allowed!
+    }
     return cell;
 }
 

@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CQCategory : NSObject // class CQCategory
+@interface CQCategory : NSObject // class name = CQCategory
 
-@property (nonatomic) NSString *name; // set public properties
+@property (nonatomic) NSString *name; // set public properties for CQCategory
 @property (nonatomic) NSArray *options;
 @property (nonatomic) NSString *selection;
 
