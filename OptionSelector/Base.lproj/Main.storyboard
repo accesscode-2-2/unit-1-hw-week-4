@@ -21,7 +21,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkP-Qt-TSY">
                                             <rect key="frame" x="517" y="11" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <color key="textColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -36,14 +36,10 @@
                             <outlet property="delegate" destination="Aoe-Q3-J9A" id="zby-KH-eg5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="oQl-72-tu8">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="6Di-QR-ux2">
-                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="addButton:" destination="Aoe-Q3-J9A" id="92R-vj-RpM"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="oQl-72-tu8"/>
+                    <connections>
+                        <outlet property="saveSelection" destination="JkP-Qt-TSY" id="NxG-ca-9bq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZV-7a-fd5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

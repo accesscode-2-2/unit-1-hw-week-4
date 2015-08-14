@@ -15,13 +15,15 @@
 
 @property (nonatomic) NSMutableArray *category;
 @property (nonatomic) NSInteger index;
+@property (weak, nonatomic) IBOutlet UILabel *saveSelection;
 
 @end
 
 @implementation CQCategoryTableViewController
 
 // need to add selected option into CQCategoryTableViewController
-- (IBAction)addButton:(UIBarButtonItem *)sender {
+// - (IBAction)addButton:(UIBarButtonItem *)sender
+- (NSString *)saveSelection {
     
     // tutorial http://www.icodeblog.com/2008/10/03/iphone-programming-tutorial-savingretrieving-data-using-nsuserdefaults/
     
@@ -43,6 +45,7 @@
             NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
             // setObject to temp detail text labels
             [prefs setObject:tmp.detailTextLabel.text forKey:@"cell1"];
+            
         }
         else if (i == 1) {
             NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -106,13 +109,12 @@
                        ];
     games.selection = @" ";
     
-    // add each array to the
+    // add each array (food, cars, and games) to the NSMutable Array category
     [self.category addObject:food];
     [self.category addObject:cars];
     [self.category addObject:games];
     
 }
-
 
 //- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 //    
