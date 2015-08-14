@@ -13,6 +13,8 @@
 
 @property NSArray *storePastryCategories;
 
+-(void) setupPastryData;
+
 
 @end
 
@@ -21,27 +23,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    PastryCategories *donuts = [[PastryCategories alloc]init];
-    [donuts setPastryName: @"Doughnut"];
     
-    PastryCategories *jellybeans = [[PastryCategories alloc]init];
-    [jellybeans setPastryName: @"Doughnut"];
+    [self setupPastryData];
     
-    PastryCategories *cupcakes = [[PastryCategories alloc]init];
-    [cupcakes setPastryName: @"Doughnut"];
-
-    PastryCategories *macaroons = [[PastryCategories alloc]init];
-    [macaroons setPastryName: @"Doughnut"];
     
-    self.storePastryCategories = [[NSArray alloc]initWithObjects: donuts,jellybeans, cupcakes, macaroons, nil];
-
-    
-    NSLog(@"%@", cupcakes);
-    NSLog(@"%@", donuts);
+   
 
     
 
-  
     
     
     
@@ -49,6 +38,27 @@
     
    self.navigationItem.title = @"Pastries";
 }
+
+
+-(void) setupPastryData {
+    PastryCategories *donuts = [[PastryCategories alloc]init];
+    [donuts setPastryName: @"Doughnut"];
+    
+    PastryCategories *jellybeans = [[PastryCategories alloc]init];
+    [jellybeans setPastryName: @"JellyBeans"];
+    
+    PastryCategories *cupcakes = [[PastryCategories alloc]init];
+    [cupcakes setPastryName: @"Cupcakes"];
+    
+    PastryCategories *macaroons = [[PastryCategories alloc]init];
+    [macaroons setPastryName: @"Macaroons"];
+    
+    self.storePastryCategories = [[NSArray alloc]initWithObjects: donuts.pastryName,jellybeans.pastryName, cupcakes.pastryName, macaroons.pastryName, nil];
+    
+ 
+    
+}
+
 
 
 
@@ -75,6 +85,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PastriesIdentifier" forIndexPath:indexPath];
 
+    cell.textLabel.text=[self.storePastryCategories objectAtIndex:indexPath.row];
     
     
     
