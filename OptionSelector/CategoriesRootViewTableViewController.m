@@ -32,7 +32,7 @@
     
     self.data = @[self.model.red, self.model.yellow, self.model.blue];
     
-    self.navigationItem.title = @"Basics";
+    self.navigationItem.title = @"Shades";
     
 }
 
@@ -69,9 +69,8 @@
 
     }
 
-    //Maybe I'll change the font?...Not sure to what yet.
-//    UIFont *myFont = [ UIFont fontWithName: @"" size: 25.0 ];
-//    cell.textLabel.font  = myFont;
+    UIFont *myFont = [ UIFont fontWithName: @"Marion" size: 25.0 ];
+    cell.textLabel.font  = myFont;
     
     return cell;
 }

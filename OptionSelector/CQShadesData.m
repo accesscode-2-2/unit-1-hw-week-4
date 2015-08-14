@@ -88,7 +88,7 @@
                           @"arctic"
                           ];
    
-    //Must change all of the colors to the following format for the color to work
+    //Without (CGFLoat) OR the decimal (.0) after the number the UIColor will not show; one OR the other is sufficient.
     UIColor *cherry = [UIColor colorWithRed:(CGFloat)164.0/255.0 green:(CGFloat)0.0/255.0 blue:(CGFloat)0.0/255.0 alpha:(CGFloat)1.0];
     
     UIColor *rose = [UIColor colorWithRed:(CGFloat)227.0/255.0 green:(CGFloat)38.0/255.0 blue:(CGFloat)54.0/255.0 alpha:1.0];
@@ -132,25 +132,25 @@
                              lipstick
                             ];
     
-    UIColor *canary = [UIColor colorWithRed:255/255 green:191/255 blue:0/255 alpha:1];
-    UIColor *gold = [UIColor colorWithRed:255/255 green:179/255 blue:71/255 alpha:1];
-    UIColor *daffodil = [UIColor colorWithRed:247/255 green:233/255 blue:142/255 alpha:1];
-    UIColor *flaxen = [UIColor colorWithRed:181/255 green:166/255 blue:66/255 alpha:1];
-    UIColor *butter = [UIColor colorWithRed:255/255 green:248/255 blue:220/255 alpha:1];
-    UIColor *lemon = [UIColor colorWithRed:255/255 green:247/255 blue:0/255 alpha:1];
-    UIColor *mustard = [UIColor colorWithRed:255/255 green:219/255 blue:88/255 alpha:1];
-    UIColor *corn = [UIColor colorWithRed:233/255 green:214/255 blue:107/255 alpha:1];
-    UIColor *medallion = [UIColor colorWithRed:218/255 green:165/255 blue:32/255 alpha:1];
-    UIColor *dandelion = [UIColor colorWithRed:255/255 green:209/255 blue:42/255 alpha:1];
-    UIColor *fire = [UIColor colorWithRed:228/255 green:155/255 blue:15/255 alpha:1];
-    UIColor *bumblebee = [UIColor colorWithRed:236/255 green:213/255 blue:64/255 alpha:1];
-    UIColor *banana = [UIColor colorWithRed:255/255 green:253/255 blue:208/255 alpha:1];
-    UIColor *butterscotch = [UIColor colorWithRed:244/255 green:196/255 blue:48/255 alpha:1];
-    UIColor *dijon = [UIColor colorWithRed:184/255 green:134/255 blue:11/255 alpha:1];
-    UIColor *honey = [UIColor colorWithRed:240/255 green:220/255 blue:130/255 alpha:1];
-    UIColor *blonde = [UIColor colorWithRed:250/255 green:240/255 blue:190/255 alpha:1];
-    UIColor *pineapple = [UIColor colorWithRed:251/255 green:236/255 blue:93/255 alpha:1];
-    UIColor *tuscanSun = [UIColor colorWithRed:255/255 green:223/255 blue:0/255 alpha:1];
+    UIColor *canary = [UIColor colorWithRed:(CGFloat)255/255 green:(CGFloat)191/255 blue:(CGFloat)0/255 alpha:1];
+    UIColor *gold = [UIColor colorWithRed:(CGFloat)255/255 green:(CGFloat)179/255 blue:(CGFloat)71/255 alpha:1];
+    UIColor *daffodil = [UIColor colorWithRed:(CGFloat)247/255 green:(CGFloat)233/255 blue:(CGFloat)142/255 alpha:1];
+    UIColor *flaxen = [UIColor colorWithRed:(CGFloat)181/255 green:(CGFloat)166/255 blue:(CGFloat)66/255 alpha:1];
+    UIColor *butter = [UIColor colorWithRed:(CGFloat)255/255 green:(CGFloat)248/255 blue:(CGFloat)220/255 alpha:1];
+    UIColor *lemon = [UIColor colorWithRed:(CGFloat)255/255 green:(CGFloat)247/255 blue:(CGFloat)0/255 alpha:1];
+    UIColor *mustard = [UIColor colorWithRed:(CGFloat)255/255 green:(CGFloat)219/255 blue:(CGFloat)88/255 alpha:1];
+    UIColor *corn = [UIColor colorWithRed:(CGFloat)233/255 green:(CGFloat)214/255 blue:(CGFloat)107/255 alpha:1];
+    UIColor *medallion = [UIColor colorWithRed:(CGFloat)218/255 green:(CGFloat)165/255 blue:(CGFloat)32/255 alpha:1];
+    UIColor *dandelion = [UIColor colorWithRed:(CGFloat)255/255 green:(CGFloat)209/255 blue:(CGFloat)42/255 alpha:1];
+    UIColor *fire = [UIColor colorWithRed:(CGFloat)228/255 green:(CGFloat)155/255 blue:(CGFloat)15/255 alpha:1];
+    UIColor *bumblebee = [UIColor colorWithRed:(CGFloat)236/255 green:(CGFloat)213/255 blue:(CGFloat)64/255 alpha:1];
+    UIColor *banana = [UIColor colorWithRed:(CGFloat)255/255 green:(CGFloat)253/255 blue:(CGFloat)208/255 alpha:1];
+    UIColor *butterscotch = [UIColor colorWithRed:(CGFloat)244/255 green:(CGFloat)196/255 blue:(CGFloat)48/255 alpha:1];
+    UIColor *dijon = [UIColor colorWithRed:(CGFloat)184/255 green:(CGFloat)134/255 blue:(CGFloat)11/255 alpha:1];
+    UIColor *honey = [UIColor colorWithRed:(CGFloat)240/255 green:(CGFloat)220/255 blue:(CGFloat)130/255 alpha:1];
+    UIColor *blonde = [UIColor colorWithRed:(CGFloat)250/255 green:(CGFloat)240/255 blue:(CGFloat)190/255 alpha:1];
+    UIColor *pineapple = [UIColor colorWithRed:(CGFloat)251/255 green:(CGFloat)236/255 blue:(CGFloat)93/255 alpha:1];
+    UIColor *tuscanSun = [UIColor colorWithRed:(CGFloat)255/255 green:(CGFloat)223/255 blue:(CGFloat)0/255 alpha:1];
 
     
     self.yellow.shadeColors = @[canary,
@@ -174,25 +174,25 @@
                                 tuscanSun
                             ];
     
-    UIColor *slate = [UIColor colorWithRed:112/255 green:128/255 blue:144/255 alpha:1];
-    UIColor *sky = [UIColor colorWithRed:135/255 green:206/255 blue:235/255 alpha:1];
-    UIColor *navy = [UIColor colorWithRed:0/255 green:0/255 blue:128/255 alpha:1];
-    UIColor *indigo = [UIColor colorWithRed:75/255 green:0/255 blue:130/255 alpha:1];
-    UIColor *cobalt = [UIColor colorWithRed:0/255 green:71/255 blue:171/255 alpha:1];
-    UIColor *teal = [UIColor colorWithRed:0/255 green:128/255 blue:128/255 alpha:1];
-    UIColor *ocean = [UIColor colorWithRed:47/255 green:79/255 blue:79/255 alpha:1];
-    UIColor *peacock = [UIColor colorWithRed:47/255 green:47/255 blue:79/255 alpha:1];
-    UIColor *azure = [UIColor colorWithRed:0/255 green:51/255 blue:153/255 alpha:1];
-    UIColor *cerulean = [UIColor colorWithRed:0/255 green:123/255 blue:167/255 alpha:1];
-    UIColor *lapis = [UIColor colorWithRed:21/255 green:96/255 blue:89/255 alpha:1];
-    UIColor *spruce = [UIColor colorWithRed:117/255 green:133/255 blue:123/255 alpha:1];
-    UIColor *stone = [UIColor colorWithRed:83/255 green:104/255 blue:120/255 alpha:1];
-    UIColor *aegean = [UIColor colorWithRed:8/255 green:69/255 blue:126/255 alpha:1];
-    UIColor *blueberry = [UIColor colorWithRed:25/255 green:25/255 blue:112/255 alpha:1];
-    UIColor *denim = [UIColor colorWithRed:0/255 green:35/255 blue:102/255 alpha:1];
-    UIColor *admiral = [UIColor colorWithRed:0/255 green:0/255 blue:156/255 alpha:1];
-    UIColor *sapphire = [UIColor colorWithRed:18/255 green:97/255 blue:128/255 alpha:1];
-    UIColor *arctic = [UIColor colorWithRed:231/255 green:254/255 blue:255/255 alpha:1];
+    UIColor *slate = [UIColor colorWithRed:112.0/255.0 green:128.0/255.0 blue:144.0/255.0 alpha:1.0];
+    UIColor *sky = [UIColor colorWithRed:135.0/255.0 green:206.0/255.0 blue:235.0/255.0 alpha:1.0];
+    UIColor *navy = [UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:128.0/255.0 alpha:1.0];
+    UIColor *indigo = [UIColor colorWithRed:75.0/255.0 green:0.0/255.0 blue:130.0/255.0 alpha:1.0];
+    UIColor *cobalt = [UIColor colorWithRed:0.0/255.0 green:71.0/255.0 blue:171.0/255.0 alpha:1.0];
+    UIColor *teal = [UIColor colorWithRed:0.0/255.0 green:128.0/255.0 blue:128.0/255.0 alpha:1.0];
+    UIColor *ocean = [UIColor colorWithRed:47.0/255.0 green:79.0/255.0 blue:79.0/255.0 alpha:1.0];
+    UIColor *peacock = [UIColor colorWithRed:47.0/255.0 green:47.0/255.0 blue:79.0/255.0 alpha:1.0];
+    UIColor *azure = [UIColor colorWithRed:0.0/255.0 green:51.0/255.0 blue:153.0/255.0 alpha:1.0];
+    UIColor *cerulean = [UIColor colorWithRed:0.0/255.0 green:123.0/255.0 blue:167.0/255.0 alpha:1.0];
+    UIColor *lapis = [UIColor colorWithRed:21.0/255.0 green:96.0/255.0 blue:89.0/255.0 alpha:1.0];
+    UIColor *spruce = [UIColor colorWithRed:117.0/255.0 green:133.0/255.0 blue:123.0/255.0 alpha:1.0];
+    UIColor *stone = [UIColor colorWithRed:83.0/255.0 green:104.0/255.0 blue:120.0/255.0 alpha:1.0];
+    UIColor *aegean = [UIColor colorWithRed:8.0/255.0 green:69.0/255.0 blue:126.0/255.0 alpha:1.0];
+    UIColor *blueberry = [UIColor colorWithRed:25.0/255.0 green:25.0/255.0 blue:112.0/255.0 alpha:1.0];
+    UIColor *denim = [UIColor colorWithRed:0.0/255.0 green:35.0/255.0 blue:102.0/255.0 alpha:1.0];
+    UIColor *admiral = [UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:156.0/255.0 alpha:1.0];
+    UIColor *sapphire = [UIColor colorWithRed:18.0/255.0 green:97.0/255.0 blue:128.0/255.0 alpha:1.0];
+    UIColor *arctic = [UIColor colorWithRed:231.0/255.0 green:254.0/255.0 blue:255.0/255.0 alpha:1.0];
 
     self.blue.shadeColors = @[slate,
                               sky,
