@@ -27,10 +27,11 @@
     CQCategory *category1 = [[CQCategory alloc]init];  // created instance of CQCategory class called *category1
     category1.name = @"Food"; // set properties
     category1.options = @[
-                      @"cheeseburger",
-                      @"milk",
-                      @"eggs",
-                      @"pickles"
+                      @"Cheeseburger",
+                      @"Milk",
+                      @"Eggs",
+                      @"Pumpkin Pie",
+                      @"Pickles"
                       ];
     category1.selection = @"";
     
@@ -44,6 +45,8 @@
                           @"Porkchop",
                           @"Scooby Doo",
                           @"Wishbone",
+                          @"Air Bud",
+                          @"Santa's Little Helper",
                           @"Odie"
                           ];
     category2.selection = @"";
@@ -100,6 +103,8 @@
     } else {
         cell.detailTextLabel.text = thisCategory.selection; // this adds selection info to main table view
     }
+    
+    // insert if statement to connect check mark here
     
     return cell; // return the contents of each cell
 
