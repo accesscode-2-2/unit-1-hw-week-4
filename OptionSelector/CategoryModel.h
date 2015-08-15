@@ -12,7 +12,6 @@
 
 @property (nonatomic) NSMutableArray *categories;
 
-
 + (instancetype)sharedInstance;
 
 - (void)initializeModel;
