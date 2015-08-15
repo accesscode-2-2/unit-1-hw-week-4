@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		898EFF241B7AD61E00A30F21 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898EFF231B7AD61E00A30F21 /* NavigationViewController.m */; };
+		898EFF271B7AD63D00A30F21 /* AnimalDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898EFF261B7AD63D00A30F21 /* AnimalDetailTableViewController.m */; };
+		898EFF2A1B7AD65E00A30F21 /* AnimalTypesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898EFF291B7AD65E00A30F21 /* AnimalTypesTableViewController.m */; };
+		898EFF301B7AD82F00A30F21 /* CQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 898EFF2F1B7AD82F00A30F21 /* CQCategory.m */; };
 		8DECE7921B78082B0064D760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7911B78082B0064D760 /* main.m */; };
 		8DECE7951B78082B0064D760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7941B78082B0064D760 /* AppDelegate.m */; };
-		8DECE7981B78082B0064D760 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7971B78082B0064D760 /* ViewController.m */; };
 		8DECE79B1B78082B0064D760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE7991B78082B0064D760 /* Main.storyboard */; };
 		8DECE79D1B78082B0064D760 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE79C1B78082B0064D760 /* Images.xcassets */; };
 		8DECE7A01B78082B0064D760 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE79E1B78082B0064D760 /* LaunchScreen.xib */; };
@@ -27,13 +30,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		898EFF221B7AD61E00A30F21 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		898EFF231B7AD61E00A30F21 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		898EFF251B7AD63D00A30F21 /* AnimalDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalDetailTableViewController.h; sourceTree = "<group>"; };
+		898EFF261B7AD63D00A30F21 /* AnimalDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalDetailTableViewController.m; sourceTree = "<group>"; };
+		898EFF281B7AD65E00A30F21 /* AnimalTypesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalTypesTableViewController.h; sourceTree = "<group>"; };
+		898EFF291B7AD65E00A30F21 /* AnimalTypesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalTypesTableViewController.m; sourceTree = "<group>"; };
+		898EFF2E1B7AD82F00A30F21 /* CQCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CQCategory.h; path = ../CQCategory.h; sourceTree = "<group>"; };
+		898EFF2F1B7AD82F00A30F21 /* CQCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CQCategory.m; path = ../CQCategory.m; sourceTree = "<group>"; };
 		8DECE78C1B78082B0064D760 /* OptionSelector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptionSelector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DECE7901B78082B0064D760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DECE7911B78082B0064D760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DECE7931B78082B0064D760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DECE7941B78082B0064D760 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8DECE7961B78082B0064D760 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8DECE7971B78082B0064D760 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8DECE79A1B78082B0064D760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DECE79C1B78082B0064D760 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8DECE79F1B78082B0064D760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -83,8 +92,14 @@
 			children = (
 				8DECE7931B78082B0064D760 /* AppDelegate.h */,
 				8DECE7941B78082B0064D760 /* AppDelegate.m */,
-				8DECE7961B78082B0064D760 /* ViewController.h */,
-				8DECE7971B78082B0064D760 /* ViewController.m */,
+				898EFF221B7AD61E00A30F21 /* NavigationViewController.h */,
+				898EFF231B7AD61E00A30F21 /* NavigationViewController.m */,
+				898EFF2E1B7AD82F00A30F21 /* CQCategory.h */,
+				898EFF2F1B7AD82F00A30F21 /* CQCategory.m */,
+				898EFF281B7AD65E00A30F21 /* AnimalTypesTableViewController.h */,
+				898EFF291B7AD65E00A30F21 /* AnimalTypesTableViewController.m */,
+				898EFF251B7AD63D00A30F21 /* AnimalDetailTableViewController.h */,
+				898EFF261B7AD63D00A30F21 /* AnimalDetailTableViewController.m */,
 				8DECE7991B78082B0064D760 /* Main.storyboard */,
 				8DECE79C1B78082B0064D760 /* Images.xcassets */,
 				8DECE79E1B78082B0064D760 /* LaunchScreen.xib */,
@@ -219,9 +234,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DECE7981B78082B0064D760 /* ViewController.m in Sources */,
+				898EFF271B7AD63D00A30F21 /* AnimalDetailTableViewController.m in Sources */,
+				898EFF301B7AD82F00A30F21 /* CQCategory.m in Sources */,
 				8DECE7951B78082B0064D760 /* AppDelegate.m in Sources */,
+				898EFF2A1B7AD65E00A30F21 /* AnimalTypesTableViewController.m in Sources */,
 				8DECE7921B78082B0064D760 /* main.m in Sources */,
+				898EFF241B7AD61E00A30F21 /* NavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +436,7 @@
 				8DECE7B11B78082B0064D760 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DECE7B21B78082B0064D760 /* Build configuration list for PBXNativeTarget "OptionSelectorTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +445,7 @@
 				8DECE7B41B78082B0064D760 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
