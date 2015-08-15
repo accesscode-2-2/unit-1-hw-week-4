@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "OSDetailTableViewControllerDelegate.h"
+#import "Option.h"
 
 @interface OSDetailTableViewController : UITableViewController
 
 @property (nonatomic,weak) id<OSDetailTableViewControllerDelegate>delegate;
-@property (nonatomic) NSString *keyForArrayToBeDisplayed;
-@property (nonatomic) NSString *currentlySelectedOption;
+@property (nonatomic) Option *selectedCategory;
 
 @end

@@ -7,35 +7,44 @@
 //
 
 #import "OSTableViewController.h"
+#import "Option.h"
 
 @interface OSTableViewController ()
 
-@property (nonatomic) NSString *selectedDog;
-@property (nonatomic) NSString *selectedCar;
-@property (nonatomic) NSString *selectedFood;
-@property (nonatomic) NSString *currentKey;
-@property (nonatomic) NSDictionary *dictionaryForKeys;
+@property (nonatomic) NSArray * allOptionsArray;
 
 @end
 
 @implementation OSTableViewController
+- (IBAction)saveData:(UIBarButtonItem *)sender {
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    Option *d = self.allOptionsArray[0];
+    Option *c = self.allOptionsArray[1];
+    Option *f = self.allOptionsArray[2];
+
+    [defaults setObject:d.selection forKey:@"dogs"];
+    [defaults setObject:c.selection forKey:@"cars"];
+    [defaults setObject:f.selection forKey:@"foods"];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dictionaryForKeys = @{
-                               @"Dogs" : [[NSMutableArray alloc]initWithObjects:@"", nil],
-                               @"Cars" : [[NSMutableArray alloc]initWithObjects:@"", nil],
-                               @"Foods": [[NSMutableArray alloc]initWithObjects:@"", nil],
-                               };
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    Option *dogs = [[Option alloc] initWithName:@"Dogs" andArrayOfOptions:@[@"Daschund", @"Rottweiler", @"Chihuahua", @"Pug", @"Siberian Husky", @"Labrador", @"Boxer", @"Pitbull", @"Dalmation"]];
+    Option *cars = [[Option alloc] initWithName:@"Cars" andArrayOfOptions: @[@"Camaro", @"Chevelle", @"Civic", @"Mustang", @"GTO", @"Fusion", @"Impreza"]];
+    Option *foods = [[Option alloc] initWithName:@"Foods" andArrayOfOptions:@[@"Noodles", @"Banana", @"Taco", @"PB&J", @"Strudel"]];
+    self.allOptionsArray = [NSArray arrayWithObjects:dogs,cars,foods, nil];
+   
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"dogs"]!=nil){
+        dogs.selection = [[NSUserDefaults standardUserDefaults] objectForKey:@"dogs"];
+        cars.selection = [[NSUserDefaults standardUserDefaults] objectForKey:@"cars"];
+        foods.selection = [[NSUserDefaults standardUserDefaults] objectForKey:@"foods"];
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self.tableView reloadData];
 }
 
@@ -61,17 +70,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OptionSelectorIdentifier" forIndexPath:indexPath];
-
+    
     // Configure the cell...
-    NSArray *allKeys = [self.dictionaryForKeys allKeys];
+   
+    Option *option = self.allOptionsArray[indexPath.row];
     
-    cell.textLabel.text = allKeys[indexPath.row];
+    cell.textLabel.text = option.name;
+
     
-    NSArray *selectedOption = [self.dictionaryForKeys objectForKey:allKeys[indexPath.row]];
-    NSString *detailText = [selectedOption objectAtIndex:0];
-    
-    if(detailText != nil){
-        cell.detailTextLabel.text = detailText;
+    if(option.selection != nil){
+        cell.detailTextLabel.text = option.selection;
+    }
+    else {
+        cell.detailTextLabel.text = @" ";
     }
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -86,58 +97,16 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSArray *allKeys = [self.dictionaryForKeys allKeys];
-    self.currentKey = allKeys[indexPath.row];
+
     
 }
 
--(void)tableView:(OSDetailTableViewController *)sender updatedSelection:(NSString *)selection{
+-(void)tableView:(OSDetailTableViewController *)sender updatedSelection:(Option *)selection{
     
-    [self reloadSelectedChoices:selection];
- 
-    
+    NSLog(@"%@ with selection: %@", selection.name, selection.selection);
+   
 }
 
--(void)reloadSelectedChoices:(NSString *)selection{
-    [(NSMutableArray*)[self.dictionaryForKeys objectForKey:self.currentKey] removeAllObjects];
-    NSMutableArray *temp = [self.dictionaryForKeys objectForKey:self.currentKey];
-    [temp addObject:selection];
-    NSLog(@"%@",temp);
-}
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 
 #pragma mark - Navigation
@@ -149,9 +118,8 @@
     
     OSDetailTableViewController *tVC = segue.destinationViewController;
     tVC.delegate = self;
-    tVC.keyForArrayToBeDisplayed = self.currentKey;
-    NSString *currentSelection = [[self.dictionaryForKeys objectForKey:self.currentKey] objectAtIndex:0];
-    tVC.currentlySelectedOption = currentSelection;
+    tVC.selectedCategory = self.allOptionsArray[[self.tableView indexPathForSelectedRow].row];
+   
 }
 
 

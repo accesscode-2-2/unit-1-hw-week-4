@@ -11,5 +11,4 @@
 #import "OSDetailTableViewController.h"
 
 @interface OSTableViewController : UITableViewController <OSDetailTableViewControllerDelegate>
--(void)reloadSelectedChoices:(NSString *)selection;
 @end

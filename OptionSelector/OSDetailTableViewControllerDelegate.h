@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Option.h"
 
 @class OSDetailTableViewController;
 
 @protocol OSDetailTableViewControllerDelegate <NSObject>
 
--(void) tableView:(OSDetailTableViewController *)sender updatedSelection:(NSString *)selection;
+-(void) tableView:(OSDetailTableViewController *)sender updatedSelection:(Option *)selection;
 
 @end
