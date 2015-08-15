@@ -44,6 +44,32 @@
                                  @"Triumph",
                                  @"Pride"
                                  ];
+    
+    CQCategory *sadEmotionCategory = [[CQCategory alloc]init];
+    sadEmotionCategory.name = @"SadEmotion";
+    sadEmotionCategory.options = @[
+                                     @"Depression",
+                                     @"Anguish",
+                                     @"Dispair",
+                                     @"Shame",
+                                     @"Guilt",
+                                     @"Sullen",
+                                     @"Neglect",
+                                     ];
+    
+    
+    CQCategory *angerEmotionCategory = [[CQCategory alloc]init];
+    angerEmotionCategory.name = @"angerEmotion";
+    angerEmotionCategory.options = @[
+                                     @"Rage",
+                                     @"Grumpy",
+                                     @"Disgust",
+                                     @"Envy",
+                                     @"Torment",
+                                     @"Irritation",
+                                     ];
+
+
 
 
     self.categories = @[moodCategory, happyEmotionCategory];
