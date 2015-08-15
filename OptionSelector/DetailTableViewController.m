@@ -38,7 +38,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // set category selection equal to category's option @ cell row
     self.category.selection = self.category.options[indexPath.row];
+    //
     [self.delegate DetailTableViewController:self didSelectType:self.category];
     
     

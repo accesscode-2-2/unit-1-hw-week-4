@@ -24,7 +24,7 @@
 // need to add selected option into CQCategoryTableViewController
 - (IBAction)addButton:(UIBarButtonItem *)sender {
     
-    // tutorial http://www.icodeblog.com/2008/10/03/iphone-programming-tutorial-savingretrieving-data-using-nsuserdefaults/
+    // tutorial icodeblog.com saving/retrieving data http://www.icodeblog.com/2008/10/03/iphone-programming-tutorial-savingretrieving-data-using-nsuserdefaults/
     
     // create NSArray named cells and set equal to table view's cells using visibleCells
     NSArray *cells = [self.tableView visibleCells];
@@ -44,7 +44,6 @@
             NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
             // setObject to temp detail text labels
             [prefs setObject:tmp.detailTextLabel.text forKey:@"cell1"];
-            
         }
         else if (i == 1) {
             NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
