@@ -49,13 +49,9 @@
     
     [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
     
-    CategoryModel *shared = [CategoryModel sharedInstance];
-    
     NSString *selected = [self.category.options objectAtIndex:indexPath.row];
     
     self.category.selection = selected;
-    
-    [shared.categories replaceObjectAtIndex:self.category.index withObject:self.category];
     
 }
 

@@ -24,7 +24,9 @@
     
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
     [self.tableView reloadData];
 }
 
@@ -51,7 +53,7 @@
     
     cell.textLabel.text = category.name;
     cell.detailTextLabel.text = category.selection;
-    
+    [cell layoutIfNeeded];
     return cell;
 }
 
