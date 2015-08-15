@@ -16,13 +16,13 @@
 		84FC8F991B7D580200B897A9 /* CQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC8F981B7D580200B897A9 /* CQCategory.m */; };
 		84FC8F9C1B7D58EB00B897A9 /* AllCategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC8F9B1B7D58EB00B897A9 /* AllCategoriesTableViewController.m */; };
 		84FC8F9F1B7D595400B897A9 /* DetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC8F9E1B7D595400B897A9 /* DetailsTableViewController.m */; };
-		84FC8FBD1B7ED2E700B897A9 /* Doorbell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FC8FBC1B7ED2E700B897A9 /* Doorbell.mp3 */; };
-		84FC8FBF1B7ED31400B897A9 /* TelephoneRing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FC8FBE1B7ED31400B897A9 /* TelephoneRing.mp3 */; };
-		84FC8FC11B7ED32700B897A9 /* TwoToneDoorbell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FC8FC01B7ED32700B897A9 /* TwoToneDoorbell.mp3 */; };
-		84FC8FC31B7ED33D00B897A9 /* ButtonClickOn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FC8FC21B7ED33D00B897A9 /* ButtonClickOn.mp3 */; };
-		84FC8FC51B7ED35300B897A9 /* PhoneRinging.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FC8FC41B7ED35300B897A9 /* PhoneRinging.mp3 */; };
-		84FC8FC71B7ED36A00B897A9 /* VintagePhoneRinging.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FC8FC61B7ED36A00B897A9 /* VintagePhoneRinging.mp3 */; };
-		84FC8FC91B7ED39D00B897A9 /* TongueRolling.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FC8FC81B7ED39D00B897A9 /* TongueRolling.mp3 */; };
+		84FC8FD31B7F7C5B00B897A9 /* Doorbell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FC8FD21B7F7C5B00B897A9 /* Doorbell.mp3 */; };
+		84FC8FD51B7F7C6700B897A9 /* VintagePhoneRinging.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FC8FD41B7F7C6700B897A9 /* VintagePhoneRinging.mp3 */; };
+		84FC8FD71B7F7C7100B897A9 /* TongueRolling.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FC8FD61B7F7C7100B897A9 /* TongueRolling.mp3 */; };
+		84FC8FD91B7F7C7A00B897A9 /* PhoneRinging.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FC8FD81B7F7C7A00B897A9 /* PhoneRinging.mp3 */; };
+		84FC8FDB1B7F7C8600B897A9 /* ButtonClickOn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FC8FDA1B7F7C8600B897A9 /* ButtonClickOn.mp3 */; };
+		84FC8FDD1B7F7C9000B897A9 /* TwoToneDoorbell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FC8FDC1B7F7C9000B897A9 /* TwoToneDoorbell.mp3 */; };
+		84FC8FDF1B7F7C9700B897A9 /* TelephoneRing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FC8FDE1B7F7C9700B897A9 /* TelephoneRing.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,13 +53,13 @@
 		84FC8F9B1B7D58EB00B897A9 /* AllCategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllCategoriesTableViewController.m; sourceTree = "<group>"; };
 		84FC8F9D1B7D595400B897A9 /* DetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTableViewController.h; sourceTree = "<group>"; };
 		84FC8F9E1B7D595400B897A9 /* DetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTableViewController.m; sourceTree = "<group>"; };
-		84FC8FBC1B7ED2E700B897A9 /* Doorbell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Doorbell.mp3; path = ../../../../../../../.Trash/Doorbell.mp3; sourceTree = "<group>"; };
-		84FC8FBE1B7ED31400B897A9 /* TelephoneRing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = TelephoneRing.mp3; path = ../../../../../../../.Trash/TelephoneRing.mp3; sourceTree = "<group>"; };
-		84FC8FC01B7ED32700B897A9 /* TwoToneDoorbell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = TwoToneDoorbell.mp3; path = ../../../../../../../.Trash/TwoToneDoorbell.mp3; sourceTree = "<group>"; };
-		84FC8FC21B7ED33D00B897A9 /* ButtonClickOn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ButtonClickOn.mp3; path = ../../../../../../../.Trash/ButtonClickOn.mp3; sourceTree = "<group>"; };
-		84FC8FC41B7ED35300B897A9 /* PhoneRinging.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = PhoneRinging.mp3; path = ../../../../../../../.Trash/PhoneRinging.mp3; sourceTree = "<group>"; };
-		84FC8FC61B7ED36A00B897A9 /* VintagePhoneRinging.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = VintagePhoneRinging.mp3; path = ../../../../../../../.Trash/VintagePhoneRinging.mp3; sourceTree = "<group>"; };
-		84FC8FC81B7ED39D00B897A9 /* TongueRolling.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = TongueRolling.mp3; path = ../../../../../../../Downloads/TongueRolling.mp3; sourceTree = "<group>"; };
+		84FC8FD21B7F7C5B00B897A9 /* Doorbell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Doorbell.mp3; sourceTree = "<group>"; };
+		84FC8FD41B7F7C6700B897A9 /* VintagePhoneRinging.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VintagePhoneRinging.mp3; sourceTree = "<group>"; };
+		84FC8FD61B7F7C7100B897A9 /* TongueRolling.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TongueRolling.mp3; sourceTree = "<group>"; };
+		84FC8FD81B7F7C7A00B897A9 /* PhoneRinging.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PhoneRinging.mp3; sourceTree = "<group>"; };
+		84FC8FDA1B7F7C8600B897A9 /* ButtonClickOn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ButtonClickOn.mp3; sourceTree = "<group>"; };
+		84FC8FDC1B7F7C9000B897A9 /* TwoToneDoorbell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TwoToneDoorbell.mp3; sourceTree = "<group>"; };
+		84FC8FDE1B7F7C9700B897A9 /* TelephoneRing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TelephoneRing.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,13 +112,13 @@
 				84FC8F751B7D546100B897A9 /* Main.storyboard */,
 				84FC8F781B7D546100B897A9 /* Images.xcassets */,
 				84FC8F7A1B7D546200B897A9 /* LaunchScreen.xib */,
-				84FC8FBC1B7ED2E700B897A9 /* Doorbell.mp3 */,
-				84FC8FC61B7ED36A00B897A9 /* VintagePhoneRinging.mp3 */,
-				84FC8FC81B7ED39D00B897A9 /* TongueRolling.mp3 */,
-				84FC8FC41B7ED35300B897A9 /* PhoneRinging.mp3 */,
-				84FC8FC21B7ED33D00B897A9 /* ButtonClickOn.mp3 */,
-				84FC8FC01B7ED32700B897A9 /* TwoToneDoorbell.mp3 */,
-				84FC8FBE1B7ED31400B897A9 /* TelephoneRing.mp3 */,
+				84FC8FD61B7F7C7100B897A9 /* TongueRolling.mp3 */,
+				84FC8FDA1B7F7C8600B897A9 /* ButtonClickOn.mp3 */,
+				84FC8FDE1B7F7C9700B897A9 /* TelephoneRing.mp3 */,
+				84FC8FDC1B7F7C9000B897A9 /* TwoToneDoorbell.mp3 */,
+				84FC8FD81B7F7C7A00B897A9 /* PhoneRinging.mp3 */,
+				84FC8FD41B7F7C6700B897A9 /* VintagePhoneRinging.mp3 */,
+				84FC8FD21B7F7C5B00B897A9 /* Doorbell.mp3 */,
 				84FC8F6B1B7D546100B897A9 /* Supporting Files */,
 			);
 			path = OptionSelector;
@@ -230,15 +230,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84FC8FC31B7ED33D00B897A9 /* ButtonClickOn.mp3 in Resources */,
-				84FC8FBF1B7ED31400B897A9 /* TelephoneRing.mp3 in Resources */,
+				84FC8FDB1B7F7C8600B897A9 /* ButtonClickOn.mp3 in Resources */,
+				84FC8FD91B7F7C7A00B897A9 /* PhoneRinging.mp3 in Resources */,
 				84FC8F771B7D546100B897A9 /* Main.storyboard in Resources */,
-				84FC8FC71B7ED36A00B897A9 /* VintagePhoneRinging.mp3 in Resources */,
+				84FC8FD51B7F7C6700B897A9 /* VintagePhoneRinging.mp3 in Resources */,
 				84FC8F7C1B7D546200B897A9 /* LaunchScreen.xib in Resources */,
-				84FC8FC91B7ED39D00B897A9 /* TongueRolling.mp3 in Resources */,
-				84FC8FC51B7ED35300B897A9 /* PhoneRinging.mp3 in Resources */,
-				84FC8FBD1B7ED2E700B897A9 /* Doorbell.mp3 in Resources */,
-				84FC8FC11B7ED32700B897A9 /* TwoToneDoorbell.mp3 in Resources */,
+				84FC8FDF1B7F7C9700B897A9 /* TelephoneRing.mp3 in Resources */,
+				84FC8FD71B7F7C7100B897A9 /* TongueRolling.mp3 in Resources */,
+				84FC8FD31B7F7C5B00B897A9 /* Doorbell.mp3 in Resources */,
+				84FC8FDD1B7F7C9000B897A9 /* TwoToneDoorbell.mp3 in Resources */,
 				84FC8F791B7D546100B897A9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
