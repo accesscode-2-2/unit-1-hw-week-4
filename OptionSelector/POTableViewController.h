@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface POTableViewController : UITableViewController
+@interface POTableViewController : UITableViewController {
+     NSArray *donutsArray;
+     NSArray *cupcakesArray;
+     NSArray *jellybeansArray;
+     NSArray *macaroonsArray;
+    
+    int pastryInt;
+
+}
+
+@property int pastryInt;
+
 
 @end

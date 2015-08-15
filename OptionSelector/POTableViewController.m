@@ -7,6 +7,10 @@
 //
 
 #import "POTableViewController.h"
+#import "PastryCategories.h"
+
+
+
 
 @interface POTableViewController ()
 
@@ -14,14 +18,21 @@
 
 @implementation POTableViewController
 
+@synthesize pastryInt;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    donutsArray =[[NSArray alloc]initWithObjects: @"Tres Leches Cake",@"Double Chocolate",@"Cream Brulee",@"Coconut Cream",@"Blueberry Cake",@"Strawberry Cake",@"Vanilla Bean",@"Rosemary Pineapple",@"Lavender Flowers",@"Coconut Lime", nil];
+    
+    jellybeansArray = [[NSArray alloc]initWithObjects: @"Coconut",@"Bubble Gum",@"Root Beer",@"Mango",@"Tutti-Frutti",@"Cotton Candy",@"Vanilla Bean",@"Strawberry Short Cake",@"Lime",@"Lemon", nil];
+    
+    cupcakesArray = [[NSArray alloc]initWithObjects: @"Boston Cream", @"Sugar Cookie", @"Tie Dye",@"Cookies & Cream",@"Cookie Dough", @"Red Velvet", @"Ice Cream Sundae", @"Root Beer", @"Chocolate Chip Pancake", @"Triple Chocolate Fudge", nil];
+    
+    macaroonsArray = [[NSArray alloc]initWithObjects: @"Vanilla",@"Cherry", @"Peach", @"Rasberry", @"Rose", @"Banana", @"Kiwi", @"Strawberry", @"Green Tea",@"Caramel", nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,71 +43,48 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
+
+    if (pastryInt == 0)
+        return [donutsArray count];
+    if (pastryInt == 1)
+        return [jellybeansArray count];
+    if (pastryInt == 2)
+        return [cupcakesArray count];
+    if (pastryInt == 3)
+        return [macaroonsArray count];
+    
+    [self.tableView reloadData];
     return 0;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PastryListIdentifier" forIndexPath:indexPath];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PastryListIdentifier"];
+        
+        //configure cell
+        if (pastryInt == 0)
+            cell.textLabel.text = [donutsArray objectAtIndex:indexPath.row];
+        if (pastryInt == 1)
+            cell.textLabel.text = [jellybeansArray objectAtIndex:indexPath.row];
+        if (pastryInt == 2)
+            cell.textLabel.text = [cupcakesArray objectAtIndex:indexPath.row];
+        if (pastryInt == 3)
+            cell.textLabel.text = [macaroonsArray objectAtIndex:indexPath.row];
+        
+    }
    
     
     return cell;
 }
  
- */
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
