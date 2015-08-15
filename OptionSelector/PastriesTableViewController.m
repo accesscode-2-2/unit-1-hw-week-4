@@ -43,17 +43,20 @@
 -(void) setupPastryData {
     PastryCategories *donuts = [[PastryCategories alloc]init];
     [donuts setPastryName: @"Doughnut"];
-    
-    
+    [donuts setPastryOptions:@[@"Tres Leches Cake",@"Double Chocolate",@"Cream Brulee",@"Coconut Cream",@"Blueberry Cake",@"Strawberry Cake",@"Vanilla Bean",@"Rosemary Pineapple",@"Lavender Flowers",@"Coconut Lime",]];
     
     PastryCategories *jellybeans = [[PastryCategories alloc]init];
     [jellybeans setPastryName: @"JellyBeans"];
+    [jellybeans setPastryOptions:@[@"Tres Leches Cake",@"Double Chocolate",@"Cream Brulee",@"Coconut Cream",@"Blueberry Cake",@"Strawberry Cake",@"Vanilla Bean",@"Rosemary Pineapple",@"Lavender Flowers",@"Coconut Lime",]];
     
     PastryCategories *cupcakes = [[PastryCategories alloc]init];
     [cupcakes setPastryName: @"Cupcakes"];
+    [cupcakes setPastryOptions:@[@"Tie-Dye",@"Red",@"Cream Brulee",@"Coconut Cream",@"Blueberry Cake",@"Strawberry Cake",@"Vanilla Bean",@"Rosemary Pineapple",@"Lavender Flowers",@"Coconut Lime",]];
     
     PastryCategories *macaroons = [[PastryCategories alloc]init];
     [macaroons setPastryName: @"Macaroons"];
+    [macaroons setPastryOptions:@[@"Tres Leches Cake",@"Double Chocolate",@"Cream Brulee",@"Coconut Cream",@"Blueberry Cake",@"Strawberry Cake",@"Vanilla Bean",@"Rosemary Pineapple",@"Lavender Flowers",@"Coconut Lime",]];
+
     
     self.storePastryCategories = [[NSArray alloc]initWithObjects: donuts.pastryName,jellybeans.pastryName, cupcakes.pastryName, macaroons.pastryName, nil];
     
@@ -102,9 +105,13 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self performSegueWithIdentifier:@"yourSegue" sender:self];
+
     
     NSLog(@"preparing");
 }
+
+
+
 
 
 
