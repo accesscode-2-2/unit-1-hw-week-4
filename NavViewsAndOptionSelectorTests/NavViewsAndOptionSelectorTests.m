@@ -1,19 +1,19 @@
 //
-//  OptionSelectorTests.m
-//  OptionSelectorTests
+//  NavViewsAndOptionSelectorTests.m
+//  NavViewsAndOptionSelectorTests
 //
-//  Created by Michael Kavouras on 8/9/15.
-//  Copyright (c) 2015 Mike Kavouras. All rights reserved.
+//  Created by MacMan on 8/12/15.
+//  Copyright (c) 2015 MacManApp. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface OptionSelectorTests : XCTestCase
+@interface NavViewsAndOptionSelectorTests : XCTestCase
 
 @end
 
-@implementation OptionSelectorTests
+@implementation NavViewsAndOptionSelectorTests
 
 - (void)setUp {
     [super setUp];
