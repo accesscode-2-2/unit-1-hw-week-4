@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  MainTableViewController.h
 //  Glycemic Index of Common Foods OptionSelector App
 //
 //  Created by Ayuna Vogel on 8/10/15.
@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface MainTableViewController : UITableViewController
 
-@property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic) NSArray *categories;
+-(void)initializeCategories;
 
 @end
-
