@@ -7,18 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PastryCategories.h"
+#import "PastriesTableViewController.h"
 
-@interface POTableViewController : UITableViewController {
-     NSArray *donutsArray;
-     NSArray *cupcakesArray;
-     NSArray *jellybeansArray;
-     NSArray *macaroonsArray;
-    
-    int pastryInt;
 
-}
+@interface POTableViewController : UITableViewController 
 
-@property int pastryInt;
+@property (nonatomic) PastryCategories *category;
+@property (nonatomic,weak) PastriesTableViewController *delegate;
 
 
 @end

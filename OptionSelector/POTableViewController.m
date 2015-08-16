@@ -8,6 +8,7 @@
 
 #import "POTableViewController.h"
 #import "PastryCategories.h"
+#import "PastriesTableViewController.h"
 
 
 
@@ -18,20 +19,13 @@
 
 @implementation POTableViewController
 
-@synthesize pastryInt;
+
+//Figuring out the contents of this Table View
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    
-    donutsArray =[[NSArray alloc]initWithObjects: @"Tres Leches Cake",@"Double Chocolate",@"Cream Brulee",@"Coconut Cream",@"Blueberry Cake",@"Strawberry Cake",@"Vanilla Bean",@"Rosemary Pineapple",@"Lavender Flowers",@"Coconut Lime", nil];
-    
-    jellybeansArray = [[NSArray alloc]initWithObjects: @"Coconut",@"Bubble Gum",@"Root Beer",@"Mango",@"Tutti-Frutti",@"Cotton Candy",@"Vanilla Bean",@"Strawberry Short Cake",@"Lime",@"Lemon", nil];
-    
-    cupcakesArray = [[NSArray alloc]initWithObjects: @"Boston Cream", @"Sugar Cookie", @"Tie Dye",@"Cookies & Cream",@"Cookie Dough", @"Red Velvet", @"Ice Cream Sundae", @"Root Beer", @"Chocolate Chip Pancake", @"Triple Chocolate Fudge", nil];
-    
-    macaroonsArray = [[NSArray alloc]initWithObjects: @"Vanilla",@"Cherry", @"Peach", @"Rasberry", @"Rose", @"Banana", @"Kiwi", @"Strawberry", @"Green Tea",@"Caramel", nil];
     
 }
 
@@ -49,41 +43,34 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    if (pastryInt == 0)
-        return [donutsArray count];
-    if (pastryInt == 1)
-        return [jellybeansArray count];
-    if (pastryInt == 2)
-        return [cupcakesArray count];
-    if (pastryInt == 3)
-        return [macaroonsArray count];
-    
-    [self.tableView reloadData];
-    return 0;
+    return self.category.pastryOptions.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OptionSelected" forIndexPath:indexPath];
     
+    cell.textLabel.text = [self.category.pastryOptions objectAtIndex:indexPath.row];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PastryListIdentifier" forIndexPath:indexPath];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PastryListIdentifier"];
-        
-        //configure cell
-        if (pastryInt == 0)
-            cell.textLabel.text = [donutsArray objectAtIndex:indexPath.row];
-        if (pastryInt == 1)
-            cell.textLabel.text = [jellybeansArray objectAtIndex:indexPath.row];
-        if (pastryInt == 2)
-            cell.textLabel.text = [cupcakesArray objectAtIndex:indexPath.row];
-        if (pastryInt == 3)
-            cell.textLabel.text = [macaroonsArray objectAtIndex:indexPath.row];
-        
+    //checkmark methods
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    if ([cell.textLabel.text isEqualToString:self.category.pastrySelection]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
-   
     
     return cell;
+}
+
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    self.category.pastrySelection = [self.category.pastryOptions objectAtIndex:indexPath.row];
+    
+    [self.delegate.tableView reloadData];
+    
+    [self.tableView reloadData];
+    
+    
 }
  
 

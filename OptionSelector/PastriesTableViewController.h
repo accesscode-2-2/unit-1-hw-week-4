@@ -10,11 +10,4 @@
 
 @interface PastriesTableViewController : UITableViewController
 
-
-
-
-
-
-
-
 @end

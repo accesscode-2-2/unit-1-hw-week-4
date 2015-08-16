@@ -12,6 +12,8 @@
 
 @interface PastriesTableViewController ()
 
+//Figuring out how to segue to other TVC.
+
 @property NSArray *storePastryCategories;
 
 
@@ -40,20 +42,25 @@
 -(void) setupPastryData {
     
     PastryCategories *donuts = [[PastryCategories alloc]init];
-    [donuts setPastryName: @"Doughnut"];
-        
     PastryCategories *jellybeans = [[PastryCategories alloc]init];
-    [jellybeans setPastryName: @"JellyBeans"];
-   
-    
     PastryCategories *cupcakes = [[PastryCategories alloc]init];
-    [cupcakes setPastryName: @"Cupcakes"];
-    
-    
     PastryCategories *macaroons = [[PastryCategories alloc]init];
-    [macaroons setPastryName: @"Macaroons"];
+
+    donuts.pastryName = @"Doughnut";
+    donuts.pastryOptions = @[@"Tres Leches Cake",@"Double Chocolate",@"Cream Brulee",@"Coconut Cream",@"Blueberry Cake",@"Strawberry Cake",@"Vanilla Bean",@"Rosemary Pineapple",@"Lavender Flowers",@"Coconut Lime"];
         
-    self.storePastryCategories = [[NSArray alloc]initWithObjects: donuts.pastryName,jellybeans.pastryName, cupcakes.pastryName, macaroons.pastryName, nil];
+    
+    jellybeans.pastryName = @"JellyBeans";
+    jellybeans.pastryOptions = @[@"Coconut",@"Bubble Gum",@"Root Beer",@"Mango",@"Tutti-Frutti",@"Cotton Candy",@"Vanilla Bean",@"Strawberry Short Cake",@"Lime",@"Lemon"];
+    
+    cupcakes.pastryName = @"Cupcakes";
+    cupcakes.pastryOptions = @[@"Boston Cream", @"Sugar Cookie", @"Tie Dye",@"Cookies & Cream",@"Cookie Dough", @"Red Velvet", @"Ice Cream Sundae", @"Root Beer", @"Chocolate Chip Pancake", @"Triple Chocolate Fudge"];
+    
+    
+    macaroons.pastryName = @"Macaroons";
+    macaroons.pastryOptions = @[@"Vanilla",@"Cherry", @"Peach", @"Rasberry", @"Rose", @"Banana", @"Kiwi", @"Strawberry", @"Green Tea",@"Caramel"];
+        
+    self.storePastryCategories = @[donuts, jellybeans, cupcakes, macaroons,];
 }
 
 
@@ -74,9 +81,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PastriesIdentifier" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PastryCategorySelected" forIndexPath:indexPath];
 
-    cell.textLabel.text=[self.storePastryCategories objectAtIndex:indexPath.row];
+    PastryCategories *pastry = [self.storePastryCategories objectAtIndex:indexPath.row];
+    cell.textLabel.text = pastry.pastryName;
     
     return cell;
 }
@@ -86,37 +94,20 @@
 #pragma Navigation
 
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    POTableViewController *vc = segue.destinationViewController;
     
-    POTableViewController *pastryList = [[POTableViewController alloc]initWithNibName:@"POTableViewController" bundle:nil];
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     
-    if ([[self.storePastryCategories objectAtIndex:indexPath.row] isEqual: @"Doughnut"]) {
-        pastryList.pastryInt = 0;
-        [pastryList setTitle:[self.storePastryCategories objectAtIndex:indexPath.row]];
-    }
-    if ([[self.storePastryCategories objectAtIndex:indexPath.row] isEqual: @"JellyBeans"]) {
-        pastryList.pastryInt = 1;
-        [pastryList setTitle:[self.storePastryCategories objectAtIndex:indexPath.row]];
-    }
-
-    if ([[self.storePastryCategories objectAtIndex:indexPath.row] isEqual: @"Cupcakes"]) {
-        pastryList.pastryInt = 2;
-        [pastryList setTitle:[self.storePastryCategories objectAtIndex:indexPath.row]];
-    }
-
-    if ([[self.storePastryCategories objectAtIndex:indexPath.row] isEqual: @"Macaroons"]) {
-        pastryList.pastryInt = 3;
-        [pastryList setTitle:[self.storePastryCategories objectAtIndex:indexPath.row]];
-    }
-
+    PastryCategories *newCategory = [self.storePastryCategories objectAtIndex:indexPath.row];
+    vc.category = newCategory;
     
+    vc.delegate = self;
     
-    
-
 }
 
-
+    
 
 
 

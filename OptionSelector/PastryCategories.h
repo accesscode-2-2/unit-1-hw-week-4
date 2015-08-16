@@ -10,9 +10,9 @@
 
 @interface PastryCategories : NSObject
 
-@property NSString *pastryName;
-@property NSArray *pastryOptions;
-@property NSString *pastrySelection;
+@property (nonatomic)NSString *pastryName;
+@property (nonatomic)NSArray *pastryOptions;
+@property (nonatomic)NSString *pastrySelection;
 
 
 
