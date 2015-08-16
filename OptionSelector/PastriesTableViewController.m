@@ -86,6 +86,9 @@
     PastryCategories *pastry = [self.storePastryCategories objectAtIndex:indexPath.row];
     cell.textLabel.text = pastry.pastryName;
     
+    cell.detailTextLabel.text = pastry.pastrySelection;
+
+    
     return cell;
 }
 
