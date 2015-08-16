@@ -2,7 +2,7 @@
 //  PastriesTableViewController.m
 //  OptionSelector
 //
-//  Created by Christella on 8/13/15.
+//  Created by  Christella on 8/13/15.
 //  Copyright (c) 2015 Mike Kavouras. All rights reserved.
 //
 
@@ -33,8 +33,29 @@
     
     
     
-    self.navigationItem.title = @"Pastries";
+    self.navigationItem.title = @"🍧🍰 Pastries 🍰🍧";
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:(253.0/255.0) green:(178.0/255.0) blue:(211.0/255.0) alpha:1.0];
 }
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self.tableView reloadData];
+    
+}
+
+
+
+#pragma mark Cells color
+
+- (void)tableView: (UITableView*)tableView
+  willDisplayCell: (UITableViewCell*)cell
+forRowAtIndexPath: (NSIndexPath*)indexPath
+{
+    cell.backgroundColor = indexPath.row % 2
+    ? [UIColor colorWithRed:(253.0/255.0) green:(235.0/255.0) blue:(247.0/255.0) alpha:1.0]
+    : [UIColor whiteColor];
+}
+
 
 #pragma mark - The Data
 
