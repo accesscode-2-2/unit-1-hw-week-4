@@ -10,4 +10,8 @@
 
 @interface CQCategory : NSObject
 
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSArray *options;
+@property (nonatomic) NSString *selected;
+
 @end

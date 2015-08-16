@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		8DECE7921B78082B0064D760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7911B78082B0064D760 /* main.m */; };
 		8DECE7951B78082B0064D760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7941B78082B0064D760 /* AppDelegate.m */; };
-		8DECE7981B78082B0064D760 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7971B78082B0064D760 /* ViewController.m */; };
 		8DECE79B1B78082B0064D760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE7991B78082B0064D760 /* Main.storyboard */; };
 		8DECE79D1B78082B0064D760 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE79C1B78082B0064D760 /* Images.xcassets */; };
 		8DECE7A01B78082B0064D760 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE79E1B78082B0064D760 /* LaunchScreen.xib */; };
 		8DECE7AC1B78082B0064D760 /* OptionSelectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7AB1B78082B0064D760 /* OptionSelectorTests.m */; };
 		D49844491B7E6A7E001257F0 /* CatagoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D49844481B7E6A7E001257F0 /* CatagoryTableViewController.m */; };
 		D498444C1B7E6B4D001257F0 /* CQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D498444B1B7E6B4D001257F0 /* CQCategory.m */; };
+		D4E94CDF1B7FFF3900340B43 /* DetailCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E94CDE1B7FFF3900340B43 /* DetailCategoryTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +34,6 @@
 		8DECE7911B78082B0064D760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DECE7931B78082B0064D760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DECE7941B78082B0064D760 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8DECE7961B78082B0064D760 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8DECE7971B78082B0064D760 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8DECE79A1B78082B0064D760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DECE79C1B78082B0064D760 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8DECE79F1B78082B0064D760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -46,6 +44,8 @@
 		D49844481B7E6A7E001257F0 /* CatagoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatagoryTableViewController.m; sourceTree = "<group>"; };
 		D498444A1B7E6B4D001257F0 /* CQCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQCategory.h; sourceTree = "<group>"; };
 		D498444B1B7E6B4D001257F0 /* CQCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQCategory.m; sourceTree = "<group>"; };
+		D4E94CDD1B7FFF3900340B43 /* DetailCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCategoryTableViewController.h; sourceTree = "<group>"; };
+		D4E94CDE1B7FFF3900340B43 /* DetailCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCategoryTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,12 +89,12 @@
 			children = (
 				8DECE7931B78082B0064D760 /* AppDelegate.h */,
 				8DECE7941B78082B0064D760 /* AppDelegate.m */,
-				8DECE7961B78082B0064D760 /* ViewController.h */,
-				8DECE7971B78082B0064D760 /* ViewController.m */,
 				D498444A1B7E6B4D001257F0 /* CQCategory.h */,
 				D498444B1B7E6B4D001257F0 /* CQCategory.m */,
 				D49844471B7E6A7E001257F0 /* CatagoryTableViewController.h */,
 				D49844481B7E6A7E001257F0 /* CatagoryTableViewController.m */,
+				D4E94CDD1B7FFF3900340B43 /* DetailCategoryTableViewController.h */,
+				D4E94CDE1B7FFF3900340B43 /* DetailCategoryTableViewController.m */,
 				8DECE7991B78082B0064D760 /* Main.storyboard */,
 				8DECE79C1B78082B0064D760 /* Images.xcassets */,
 				8DECE79E1B78082B0064D760 /* LaunchScreen.xib */,
@@ -229,8 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DECE7981B78082B0064D760 /* ViewController.m in Sources */,
 				D49844491B7E6A7E001257F0 /* CatagoryTableViewController.m in Sources */,
+				D4E94CDF1B7FFF3900340B43 /* DetailCategoryTableViewController.m in Sources */,
 				D498444C1B7E6B4D001257F0 /* CQCategory.m in Sources */,
 				8DECE7951B78082B0064D760 /* AppDelegate.m in Sources */,
 				8DECE7921B78082B0064D760 /* main.m in Sources */,
