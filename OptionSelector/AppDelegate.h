@@ -11,12 +11,8 @@
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
-
     AVAudioPlayer *pastryMusic;
 }
-
-
-
 
 @property (strong, nonatomic) UIWindow *window;
 

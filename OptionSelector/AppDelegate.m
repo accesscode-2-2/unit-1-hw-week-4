@@ -23,7 +23,6 @@
     pastryMusic.numberOfLoops = -1;
     [pastryMusic play];
     
-    
     return YES;
 }
 

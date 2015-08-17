@@ -11,12 +11,12 @@
 #import "PastryCategories.h"
 #import <AVFoundation/AVFoundation.h>
 
+
 @interface PastriesTableViewController () {
 
     AVAudioPlayer *_pastryLandBackground;
-
-
 }
+
 
 @property NSArray *storePastryCategories;
 
@@ -28,26 +28,25 @@
 
 @implementation PastriesTableViewController
 
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    
-    
+
     [self setupPastryData];
-    
+
     self.navigationItem.title = @"🍧🍰  Pastries   🍰🍧";
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:(253.0/255.0) green:(178.0/255.0) blue:(211.0/255.0) alpha:1.0];
-   
-    
+
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.99 green:0.71 blue:0.83 alpha:1.0];
+
 }
 
 
 - (void)viewDidAppear:(BOOL)animated {
+    
     [self.tableView reloadData];
     
 }
-
 
 
 #pragma mark Cells color
@@ -57,7 +56,7 @@
 forRowAtIndexPath: (NSIndexPath*)indexPath
 {
     cell.backgroundColor = indexPath.row % 2
-    ? [UIColor colorWithRed:(253.0/255.0) green:(235.0/255.0) blue:(247.0/255.0) alpha:1.0]
+    ? [UIColor colorWithRed:0.99 green:0.92 blue:0.97 alpha:1.0]
     : [UIColor whiteColor];
 }
 
@@ -66,7 +65,7 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
 
 
 -(void) setupPastryData {
-    
+
     PastryCategories *donuts = [[PastryCategories alloc]init];
     PastryCategories *jellybeans = [[PastryCategories alloc]init];
     PastryCategories *cupcakes = [[PastryCategories alloc]init];
@@ -75,14 +74,12 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     donuts.pastryName = @"Doughnuts";
     donuts.pastryOptions = @[@"Tres Leches Cake",@"Double Chocolate",@"Cream Brulee",@"Coconut Cream",@"Blueberry Cake",@"Strawberry Cake",@"Vanilla Bean",@"Rosemary Pineapple",@"Lavender Flowers",@"Coconut Lime"];
         
-    
     jellybeans.pastryName = @"JellyBeans";
     jellybeans.pastryOptions = @[@"Coconut",@"Bubble Gum",@"Root Beer",@"Mango",@"Tutti-Frutti",@"Cotton Candy",@"Vanilla Bean",@"Strawberry Short Cake",@"Lime",@"Lemon"];
-    
+
     cupcakes.pastryName = @"Cupcakes";
     cupcakes.pastryOptions = @[@"Boston Cream", @"Sugar Cookie", @"Tie Dye",@"Cookies & Cream",@"Cookie Dough", @"Red Velvet", @"Ice Cream Sundae", @"Root Beer", @"Chocolate Chip Pancake", @"Triple Chocolate Fudge"];
-    
-    
+
     macaroons.pastryName = @"Macaroons";
     macaroons.pastryOptions = @[@"Vanilla",@"Cherry", @"Peach", @"Rasberry", @"Rose", @"Banana", @"Kiwi", @"Strawberry", @"Green Tea",@"Caramel"];
         
@@ -106,25 +103,21 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PastryCategorySelected" forIndexPath:indexPath];
 
     PastryCategories *pastry = [self.storePastryCategories objectAtIndex:indexPath.row];
-    
-    cell.textLabel.text = pastry.pastryName;
-    
-    cell.imageView.image = [UIImage imageNamed:pastry.pastryName];
 
-    
+    cell.textLabel.text = pastry.pastryName;
+    cell.imageView.image = [UIImage imageNamed:pastry.pastryName];
     cell.detailTextLabel.text = pastry.pastrySelection;
-    
-    
+
     return cell;
 }
 
 
 
-#pragma Navigation
+#pragma mark Navigation
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -134,16 +127,10 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     
     PastryCategories *newCategory = [self.storePastryCategories objectAtIndex:indexPath.row];
-    vc.category = newCategory;
     
+    vc.category = newCategory;
     vc.delegate = self;
     
 }
-
-    
-
-
-
-
 
 @end
