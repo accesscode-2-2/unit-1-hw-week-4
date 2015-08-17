@@ -9,10 +9,14 @@
 #import "PastriesTableViewController.h"
 #import "POTableViewController.h"
 #import "PastryCategories.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface PastriesTableViewController ()
+@interface PastriesTableViewController () {
 
-//Figuring out how to segue to other TVC.
+    AVAudioPlayer *_pastryLandBackground;
+
+
+}
 
 @property NSArray *storePastryCategories;
 
@@ -29,12 +33,13 @@
     [super viewDidLoad];
     
     
+    
     [self setupPastryData];
     
-    
-    
-    self.navigationItem.title = @"🍧🍰 Pastries 🍰🍧";
+    self.navigationItem.title = @"🍧🍰  Pastries   🍰🍧";
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:(253.0/255.0) green:(178.0/255.0) blue:(211.0/255.0) alpha:1.0];
+   
+    
 }
 
 
