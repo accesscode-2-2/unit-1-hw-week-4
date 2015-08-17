@@ -72,7 +72,7 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     PastryCategories *cupcakes = [[PastryCategories alloc]init];
     PastryCategories *macaroons = [[PastryCategories alloc]init];
 
-    donuts.pastryName = @"Doughnut";
+    donuts.pastryName = @"Doughnuts";
     donuts.pastryOptions = @[@"Tres Leches Cake",@"Double Chocolate",@"Cream Brulee",@"Coconut Cream",@"Blueberry Cake",@"Strawberry Cake",@"Vanilla Bean",@"Rosemary Pineapple",@"Lavender Flowers",@"Coconut Lime"];
         
     
@@ -110,10 +110,14 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PastryCategorySelected" forIndexPath:indexPath];
 
     PastryCategories *pastry = [self.storePastryCategories objectAtIndex:indexPath.row];
+    
     cell.textLabel.text = pastry.pastryName;
     
-    cell.detailTextLabel.text = pastry.pastrySelection;
+    cell.imageView.image = [UIImage imageNamed:pastry.pastryName];
 
+    
+    cell.detailTextLabel.text = pastry.pastrySelection;
+    
     
     return cell;
 }

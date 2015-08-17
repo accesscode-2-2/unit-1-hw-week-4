@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		8DECE7921B78082B0064D760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7911B78082B0064D760 /* main.m */; };
 		8DECE7951B78082B0064D760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7941B78082B0064D760 /* AppDelegate.m */; };
-		8DECE79D1B78082B0064D760 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE79C1B78082B0064D760 /* Images.xcassets */; };
 		8DECE7A01B78082B0064D760 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE79E1B78082B0064D760 /* LaunchScreen.xib */; };
 		8DECE7AC1B78082B0064D760 /* OptionSelectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7AB1B78082B0064D760 /* OptionSelectorTests.m */; };
+		F72F82EF1B8273E100715C10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72F82EE1B8273E100715C10 /* Images.xcassets */; };
 		F7D4F5D81B7D0EEE00BC6BA4 /* PastriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D4F5D71B7D0EEE00BC6BA4 /* PastriesTableViewController.m */; };
 		F7D4F5DB1B7D190600BC6BA4 /* PastryCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D4F5DA1B7D190600BC6BA4 /* PastryCategories.m */; };
 		F7D4F6161B7E8AF300BC6BA4 /* POTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D4F6151B7E8AF300BC6BA4 /* POTableViewController.m */; };
@@ -36,11 +36,11 @@
 		8DECE7911B78082B0064D760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DECE7931B78082B0064D760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DECE7941B78082B0064D760 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8DECE79C1B78082B0064D760 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8DECE79F1B78082B0064D760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8DECE7A51B78082B0064D760 /* OptionSelectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptionSelectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DECE7AA1B78082B0064D760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DECE7AB1B78082B0064D760 /* OptionSelectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OptionSelectorTests.m; sourceTree = "<group>"; };
+		F72F82EE1B8273E100715C10 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F7D4F5D61B7D0EEE00BC6BA4 /* PastriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PastriesTableViewController.h; sourceTree = "<group>"; };
 		F7D4F5D71B7D0EEE00BC6BA4 /* PastriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PastriesTableViewController.m; sourceTree = "<group>"; };
 		F7D4F5D91B7D190600BC6BA4 /* PastryCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PastryCategories.h; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 				F7D4F5D91B7D190600BC6BA4 /* PastryCategories.h */,
 				F7D4F5DA1B7D190600BC6BA4 /* PastryCategories.m */,
 				F7D4F6171B7E8F0200BC6BA4 /* Main.storyboard */,
-				8DECE79C1B78082B0064D760 /* Images.xcassets */,
+				F72F82EE1B8273E100715C10 /* Images.xcassets */,
 				8DECE79E1B78082B0064D760 /* LaunchScreen.xib */,
 				8DECE78F1B78082B0064D760 /* Supporting Files */,
 			);
@@ -217,9 +217,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7D4F6191B7E8F0200BC6BA4 /* Main.storyboard in Resources */,
+				F72F82EF1B8273E100715C10 /* Images.xcassets in Resources */,
 				8DECE7A01B78082B0064D760 /* LaunchScreen.xib in Resources */,
 				F7D4F64F1B82504200BC6BA4 /* PastryLand.mp3 in Resources */,
-				8DECE79D1B78082B0064D760 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
