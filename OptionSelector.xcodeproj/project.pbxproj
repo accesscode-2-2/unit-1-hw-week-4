@@ -12,24 +12,24 @@
 		5D4341231B7BB22E00246CA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4341211B7BB22E00246CA5 /* Main.storyboard */; };
 		5D4341251B7BB22E00246CA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D4341241B7BB22E00246CA5 /* Images.xcassets */; };
 		5D4341281B7BB22E00246CA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D4341261B7BB22E00246CA5 /* LaunchScreen.xib */; };
-		5D4341341B7BB22E00246CA5 /* Unit1WeekFourHomeworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4341331B7BB22E00246CA5 /* Unit1WeekFourHomeworkTests.m */; };
 		5D43413F1B7BB26C00246CA5 /* CQTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D43413E1B7BB26C00246CA5 /* CQTableViewController.m */; };
 		5D4341421B7BB29800246CA5 /* CQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4341411B7BB29800246CA5 /* CQCategory.m */; };
 		5D4341451B7BB3FD00246CA5 /* CQDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4341441B7BB3FD00246CA5 /* CQDetailTableViewController.m */; };
+		7EE9A0751B8269AB00185C3D /* OptionSelectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE9A0741B8269AB00185C3D /* OptionSelectorTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5D43412E1B7BB22E00246CA5 /* PBXContainerItemProxy */ = {
+		7EE9A0761B8269AB00185C3D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5D43410C1B7BB22E00246CA5 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5D4341131B7BB22E00246CA5;
-			remoteInfo = Unit1WeekFourHomework;
+			remoteInfo = OptionSelector;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5D4341141B7BB22E00246CA5 /* Unit1WeekFourHomework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unit1WeekFourHomework.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D4341141B7BB22E00246CA5 /* OptionSelector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptionSelector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4341181B7BB22E00246CA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D4341191B7BB22E00246CA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D43411B1B7BB22E00246CA5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,15 +37,15 @@
 		5D4341221B7BB22E00246CA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D4341241B7BB22E00246CA5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5D4341271B7BB22E00246CA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		5D43412D1B7BB22E00246CA5 /* Unit1WeekFourHomeworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Unit1WeekFourHomeworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D4341321B7BB22E00246CA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D4341331B7BB22E00246CA5 /* Unit1WeekFourHomeworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Unit1WeekFourHomeworkTests.m; sourceTree = "<group>"; };
 		5D43413D1B7BB26C00246CA5 /* CQTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQTableViewController.h; sourceTree = "<group>"; };
 		5D43413E1B7BB26C00246CA5 /* CQTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQTableViewController.m; sourceTree = "<group>"; };
 		5D4341401B7BB29800246CA5 /* CQCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQCategory.h; sourceTree = "<group>"; };
 		5D4341411B7BB29800246CA5 /* CQCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQCategory.m; sourceTree = "<group>"; };
 		5D4341431B7BB3FD00246CA5 /* CQDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQDetailTableViewController.h; sourceTree = "<group>"; };
 		5D4341441B7BB3FD00246CA5 /* CQDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQDetailTableViewController.m; sourceTree = "<group>"; };
+		7EE9A0701B8269AB00185C3D /* OptionSelectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptionSelectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EE9A0731B8269AB00185C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EE9A0741B8269AB00185C3D /* OptionSelectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OptionSelectorTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D43412A1B7BB22E00246CA5 /* Frameworks */ = {
+		7EE9A06D1B8269AB00185C3D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -69,8 +69,8 @@
 		5D43410B1B7BB22D00246CA5 = {
 			isa = PBXGroup;
 			children = (
-				5D4341161B7BB22E00246CA5 /* Unit1WeekFourHomework */,
-				5D4341301B7BB22E00246CA5 /* Unit1WeekFourHomeworkTests */,
+				5D4341161B7BB22E00246CA5 /* OptionSelector */,
+				7EE9A0711B8269AB00185C3D /* OptionSelectorTests */,
 				5D4341151B7BB22E00246CA5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,13 +78,13 @@
 		5D4341151B7BB22E00246CA5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5D4341141B7BB22E00246CA5 /* Unit1WeekFourHomework.app */,
-				5D43412D1B7BB22E00246CA5 /* Unit1WeekFourHomeworkTests.xctest */,
+				5D4341141B7BB22E00246CA5 /* OptionSelector.app */,
+				7EE9A0701B8269AB00185C3D /* OptionSelectorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5D4341161B7BB22E00246CA5 /* Unit1WeekFourHomework */ = {
+		5D4341161B7BB22E00246CA5 /* OptionSelector */ = {
 			isa = PBXGroup;
 			children = (
 				5D43411B1B7BB22E00246CA5 /* AppDelegate.h */,
@@ -100,7 +100,7 @@
 				5D4341261B7BB22E00246CA5 /* LaunchScreen.xib */,
 				5D4341171B7BB22E00246CA5 /* Supporting Files */,
 			);
-			path = Unit1WeekFourHomework;
+			path = OptionSelector;
 			sourceTree = "<group>";
 		};
 		5D4341171B7BB22E00246CA5 /* Supporting Files */ = {
@@ -112,19 +112,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5D4341301B7BB22E00246CA5 /* Unit1WeekFourHomeworkTests */ = {
+		7EE9A0711B8269AB00185C3D /* OptionSelectorTests */ = {
 			isa = PBXGroup;
 			children = (
-				5D4341331B7BB22E00246CA5 /* Unit1WeekFourHomeworkTests.m */,
-				5D4341311B7BB22E00246CA5 /* Supporting Files */,
+				7EE9A0741B8269AB00185C3D /* OptionSelectorTests.m */,
+				7EE9A0721B8269AB00185C3D /* Supporting Files */,
 			);
-			path = Unit1WeekFourHomeworkTests;
+			path = OptionSelectorTests;
 			sourceTree = "<group>";
 		};
-		5D4341311B7BB22E00246CA5 /* Supporting Files */ = {
+		7EE9A0721B8269AB00185C3D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5D4341321B7BB22E00246CA5 /* Info.plist */,
+				7EE9A0731B8269AB00185C3D /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -132,9 +132,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5D4341131B7BB22E00246CA5 /* Unit1WeekFourHomework */ = {
+		5D4341131B7BB22E00246CA5 /* OptionSelector */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5D4341371B7BB22E00246CA5 /* Build configuration list for PBXNativeTarget "Unit1WeekFourHomework" */;
+			buildConfigurationList = 5D4341371B7BB22E00246CA5 /* Build configuration list for PBXNativeTarget "OptionSelector" */;
 			buildPhases = (
 				5D4341101B7BB22E00246CA5 /* Sources */,
 				5D4341111B7BB22E00246CA5 /* Frameworks */,
@@ -144,27 +144,27 @@
 			);
 			dependencies = (
 			);
-			name = Unit1WeekFourHomework;
+			name = OptionSelector;
 			productName = Unit1WeekFourHomework;
-			productReference = 5D4341141B7BB22E00246CA5 /* Unit1WeekFourHomework.app */;
+			productReference = 5D4341141B7BB22E00246CA5 /* OptionSelector.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5D43412C1B7BB22E00246CA5 /* Unit1WeekFourHomeworkTests */ = {
+		7EE9A06F1B8269AB00185C3D /* OptionSelectorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5D43413A1B7BB22E00246CA5 /* Build configuration list for PBXNativeTarget "Unit1WeekFourHomeworkTests" */;
+			buildConfigurationList = 7EE9A0781B8269AB00185C3D /* Build configuration list for PBXNativeTarget "OptionSelectorTests" */;
 			buildPhases = (
-				5D4341291B7BB22E00246CA5 /* Sources */,
-				5D43412A1B7BB22E00246CA5 /* Frameworks */,
-				5D43412B1B7BB22E00246CA5 /* Resources */,
+				7EE9A06C1B8269AB00185C3D /* Sources */,
+				7EE9A06D1B8269AB00185C3D /* Frameworks */,
+				7EE9A06E1B8269AB00185C3D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5D43412F1B7BB22E00246CA5 /* PBXTargetDependency */,
+				7EE9A0771B8269AB00185C3D /* PBXTargetDependency */,
 			);
-			name = Unit1WeekFourHomeworkTests;
-			productName = Unit1WeekFourHomeworkTests;
-			productReference = 5D43412D1B7BB22E00246CA5 /* Unit1WeekFourHomeworkTests.xctest */;
+			name = OptionSelectorTests;
+			productName = OptionSelectorTests;
+			productReference = 7EE9A0701B8269AB00185C3D /* OptionSelectorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -179,13 +179,13 @@
 					5D4341131B7BB22E00246CA5 = {
 						CreatedOnToolsVersion = 6.3.2;
 					};
-					5D43412C1B7BB22E00246CA5 = {
-						CreatedOnToolsVersion = 6.3.2;
+					7EE9A06F1B8269AB00185C3D = {
+						CreatedOnToolsVersion = 6.4;
 						TestTargetID = 5D4341131B7BB22E00246CA5;
 					};
 				};
 			};
-			buildConfigurationList = 5D43410F1B7BB22E00246CA5 /* Build configuration list for PBXProject "Unit1WeekFourHomework" */;
+			buildConfigurationList = 5D43410F1B7BB22E00246CA5 /* Build configuration list for PBXProject "OptionSelector" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -198,8 +198,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5D4341131B7BB22E00246CA5 /* Unit1WeekFourHomework */,
-				5D43412C1B7BB22E00246CA5 /* Unit1WeekFourHomeworkTests */,
+				5D4341131B7BB22E00246CA5 /* OptionSelector */,
+				7EE9A06F1B8269AB00185C3D /* OptionSelectorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -215,7 +215,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D43412B1B7BB22E00246CA5 /* Resources */ = {
+		7EE9A06E1B8269AB00185C3D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -237,21 +237,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D4341291B7BB22E00246CA5 /* Sources */ = {
+		7EE9A06C1B8269AB00185C3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D4341341B7BB22E00246CA5 /* Unit1WeekFourHomeworkTests.m in Sources */,
+				7EE9A0751B8269AB00185C3D /* OptionSelectorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5D43412F1B7BB22E00246CA5 /* PBXTargetDependency */ = {
+		7EE9A0771B8269AB00185C3D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5D4341131B7BB22E00246CA5 /* Unit1WeekFourHomework */;
-			targetProxy = 5D43412E1B7BB22E00246CA5 /* PBXContainerItemProxy */;
+			target = 5D4341131B7BB22E00246CA5 /* OptionSelector */;
+			targetProxy = 7EE9A0761B8269AB00185C3D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -359,9 +359,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Unit1WeekFourHomework/Info.plist;
+				INFOPLIST_FILE = OptionSelector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OptionSelector;
 			};
 			name = Debug;
 		};
@@ -369,13 +369,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Unit1WeekFourHomework/Info.plist;
+				INFOPLIST_FILE = OptionSelector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OptionSelector;
 			};
 			name = Release;
 		};
-		5D43413B1B7BB22E00246CA5 /* Debug */ = {
+		7EE9A0791B8269AB00185C3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -387,14 +387,15 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = Unit1WeekFourHomeworkTests/Info.plist;
+				INFOPLIST_FILE = OptionSelectorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unit1WeekFourHomework.app/Unit1WeekFourHomework";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OptionSelector.app/OptionSelector";
 			};
 			name = Debug;
 		};
-		5D43413C1B7BB22E00246CA5 /* Release */ = {
+		7EE9A07A1B8269AB00185C3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -402,17 +403,18 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = Unit1WeekFourHomeworkTests/Info.plist;
+				INFOPLIST_FILE = OptionSelectorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unit1WeekFourHomework.app/Unit1WeekFourHomework";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OptionSelector.app/OptionSelector";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5D43410F1B7BB22E00246CA5 /* Build configuration list for PBXProject "Unit1WeekFourHomework" */ = {
+		5D43410F1B7BB22E00246CA5 /* Build configuration list for PBXProject "OptionSelector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D4341351B7BB22E00246CA5 /* Debug */,
@@ -421,19 +423,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5D4341371B7BB22E00246CA5 /* Build configuration list for PBXNativeTarget "Unit1WeekFourHomework" */ = {
+		5D4341371B7BB22E00246CA5 /* Build configuration list for PBXNativeTarget "OptionSelector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D4341381B7BB22E00246CA5 /* Debug */,
 				5D4341391B7BB22E00246CA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		5D43413A1B7BB22E00246CA5 /* Build configuration list for PBXNativeTarget "Unit1WeekFourHomeworkTests" */ = {
+		7EE9A0781B8269AB00185C3D /* Build configuration list for PBXNativeTarget "OptionSelectorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5D43413B1B7BB22E00246CA5 /* Debug */,
-				5D43413C1B7BB22E00246CA5 /* Release */,
+				7EE9A0791B8269AB00185C3D /* Debug */,
+				7EE9A07A1B8269AB00185C3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
