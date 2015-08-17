@@ -1,19 +1,19 @@
 //
-//  Unit1WeekFourHomeworkTests.m
-//  Unit1WeekFourHomeworkTests
+//  OptionSelectorTests.m
+//  OptionSelectorTests
 //
-//  Created by Jackie Meggesto on 8/12/15.
+//  Created by Cameron Spickert on 8/17/15.
 //  Copyright (c) 2015 Jackie Meggesto. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface Unit1WeekFourHomeworkTests : XCTestCase
+@interface OptionSelectorTests : XCTestCase
 
 @end
 
-@implementation Unit1WeekFourHomeworkTests
+@implementation OptionSelectorTests
 
 - (void)setUp {
     [super setUp];
