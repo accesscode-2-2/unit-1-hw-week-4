@@ -2,7 +2,7 @@
 //  OptionSelectorTests.m
 //  OptionSelectorTests
 //
-//  Created by Cameron Spickert on 8/17/15.
+//  Created by Jackie Meggesto on 8/17/15.
 //  Copyright (c) 2015 Jackie Meggesto. All rights reserved.
 //
 
