@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    NSString *music = [[NSBundle mainBundle]pathForResource:@"PastryLand" ofType:@"mp3"];
+    NSString *music = [[NSBundle mainBundle]pathForResource:@"pastryland" ofType:@"mp3"];
     pastryMusic = [[AVAudioPlayer alloc] initWithContentsOfURL: [NSURL fileURLWithPath:music] error:NULL];
     pastryMusic.delegate = self;
     pastryMusic.numberOfLoops = -1;
