@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+//Model class for a category and it's related items/options. Every category has an array of options to choose from.  Every option has an array of shade colors.  Selected options and selected shade colors are selected by user.
 @interface CQCategory : NSObject
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *detailTitle;
 @property (nonatomic) NSArray *options;
-@property (nonatomic) NSString *selected;
-@property (nonatomic) UIColor *selectedShade;
+@property (nonatomic) NSString *selectedOption;
+@property (nonatomic) UIColor *selectedShadeColor;
 @property (nonatomic) NSArray *shadeColors;
 
 @end

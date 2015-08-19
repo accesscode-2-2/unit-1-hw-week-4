@@ -59,10 +59,10 @@
     //If there was no initial text on the detailTextLabel then the label would have 0 width/0 height, thereby making the detailTextLabel non-existent.  Not sure why this was happening...
     //By setting an empty space as default it sizes correctly
     
-    if (c.selected) {
+    if (c.selectedOption) {
         NSLog(@"Valid selected value");
-        cell.detailTextLabel.text = c.selected;
-        cell.backgroundColor = c.selectedShade;
+        cell.detailTextLabel.text = c.selectedOption;
+        cell.backgroundColor = c.selectedShadeColor;
         cell.textLabel.textColor = [UIColor lightGrayColor];
     } else {
         cell.detailTextLabel.text = @" ";
@@ -90,8 +90,8 @@
 -(void) didSelectShade: (NSString *)shade withColor: (UIColor *)color atIndexPath: (NSIndexPath *) indexPath{
     
     
-    ((CQCategory *) self.data[indexPath.row]).selected = shade;
-    ((CQCategory *) self.data[indexPath.row]).selectedShade = color;
+    ((CQCategory *) self.data[indexPath.row]).selectedOption = shade;
+    ((CQCategory *) self.data[indexPath.row]).selectedShadeColor = color;
     
     [self.tableView reloadData];
     

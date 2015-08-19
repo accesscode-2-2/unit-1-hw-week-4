@@ -41,7 +41,7 @@
     
     cell.textLabel.text = shadeName;
     
-    UIFont *myFont = [ UIFont fontWithName: @"Marion" size: 17.0 ];
+    UIFont *myFont = [UIFont fontWithName: @"Marion" size: 17.0 ];
     cell.textLabel.font  = myFont;
     
     return cell;
