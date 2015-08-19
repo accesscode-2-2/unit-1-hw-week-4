@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "CQCategory.h"
 
+
+//Initializes data for categories of shades from CQCategory class
 @interface CQShadesData : NSObject
 
 @property (nonatomic) CQCategory *red;
