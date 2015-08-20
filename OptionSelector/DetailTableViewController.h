@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CQCategory.h"
 
-@interface DetailTableViewController : UITableViewController {
-    NSIndexPath *checkedIndexPath;
-}
+@interface DetailTableViewController : UITableViewController 
 
 @property (nonatomic,retain) NSIndexPath *checkedIndexPath;
 @property (nonatomic) CQCategory *category;

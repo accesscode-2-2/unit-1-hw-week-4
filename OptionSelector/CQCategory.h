@@ -14,4 +14,8 @@
 @property (nonatomic) NSArray *options;
 @property (nonatomic) NSString *selection;
 
+- (instancetype)initWithCategoryType:(NSString *)type;
+
+
+
 @end

@@ -24,55 +24,12 @@
     
     self.title = @"LISTS OF THINGS!!"; // add a title
     
-    CQCategory *category1 = [[CQCategory alloc]init];  // created instance of CQCategory class
-    category1.name = @"Food"; // set properties
-    category1.options = @[
-                      @"Cheeseburger",
-                      @"Milk",
-                      @"Eggs",
-                      @"Pumpkin Pie",
-                      @"Pickles"
-                      ];
-    category1.selection = @"";
+    CQCategory *dogCategory = [[CQCategory alloc] initWithCategoryType:@"Dog"];
+    CQCategory *foodCategory = [[CQCategory alloc] initWithCategoryType:@"Food"];
+    CQCategory *planetCategory = [[CQCategory alloc] initWithCategoryType:@"Planet"];
     
+    self.categories = @[dogCategory, foodCategory, planetCategory];
     
-    CQCategory *category2 = [[CQCategory alloc]init];
-    category2.name = @"Dog";
-    category2.options = @[
-                          @"Lassie",
-                          @"Beethoven",
-                          @"Toto",
-                          @"Porkchop",
-                          @"Scooby Doo",
-                          @"Wishbone",
-                          @"Air Bud",
-                          @"Santa's Little Helper",
-                          @"Odie"
-                          ];
-    category2.selection = @"";
-    
-    
-    CQCategory *category3 = [[CQCategory alloc]init];
-    category3.name = @"Planet";
-    category3.options = @[
-                         @"Mercury",
-                         @"Venus",
-                         @"Earth",
-                         @"Mars",
-                         @"Jupiter",
-                         @"Saturn",
-                         @"Neptune",
-                         @"Uranus",
-                         @"Pluto"
-                         ];
-    category3.selection = @"";
-    
-    // Then, set the CQCategory instances into an array.
-    self.categories = @[
-                        category1,
-                        category2,
-                        category3
-                        ];
 }
 
 // reload screen with new data
