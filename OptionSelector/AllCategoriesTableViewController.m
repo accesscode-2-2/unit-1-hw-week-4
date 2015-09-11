@@ -120,6 +120,22 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     
     
     
+    if ([self.displayCategory.selection isEqualToString: @"Yellow" ]) {
+        cell.textLabel.textColor = [UIColor yellowColor];    }
+    else  if ([self.displayCategory.selection isEqualToString: @"Red" ])
+        cell.textLabel.textColor = [UIColor redColor ];
+    else  if ([self.displayCategory.selection isEqualToString: @"Blue" ])
+        cell.textLabel.textColor = [UIColor blueColor];
+    else  if ([self.displayCategory.selection isEqualToString: @"Green" ])
+        cell.textLabel.textColor = [UIColor greenColor];
+    
+    
+    
+    
+    
+    
+    
+    
     cell.backgroundColor = [UIColor clearColor];
     
     
