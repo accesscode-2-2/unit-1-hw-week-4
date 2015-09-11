@@ -266,12 +266,12 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     
     
     
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:name] drawInRect:self.view.bounds];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+        UIGraphicsBeginImageContext(self.view.frame.size);
+        [[UIImage imageNamed:name] drawInRect:self.view.bounds];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:image];
 }
 
 
