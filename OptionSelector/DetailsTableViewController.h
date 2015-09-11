@@ -16,5 +16,5 @@
 
 @property (nonatomic) CQCategory *category;
 @property (nonatomic,weak) AllCategoriesTableViewController *delegate;
-
+ 
 @end

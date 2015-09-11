@@ -13,17 +13,21 @@
 
 @interface AllCategoriesTableViewController ()  
 @property (nonatomic) NSArray *allCategories;
-
+//@property (nonatomic) category MODEL;
+@property (nonatomic) CQCategory *displayCategory;
 @end
 
 @implementation AllCategoriesTableViewController
+
 
 - (void)initializeData
 {
     CQCategory *PhoneRingtone = [[CQCategory alloc] init];
     CQCategory *SoundProfile = [[CQCategory alloc] init];
     CQCategory *IncomingCallVibration = [[CQCategory alloc] init];
-    CQCategory *BackgroundColor = [[CQCategory alloc] init];
+    CQCategory *FontColor = [[CQCategory alloc] init];
+    CQCategory *BackgroundImage = [[CQCategory alloc] init];
+
     
     PhoneRingtone.name = @"Phone Ringtone ♫";
     PhoneRingtone.options = @[
@@ -51,15 +55,29 @@
                                           @"Ticktock"
                                           ];
     
-    BackgroundColor.name = @"Background Color";
-    BackgroundColor.options = @[
+    FontColor.name = @"Font Color";
+    FontColor.options = @[
                                 @"Blue",
                                 @"Green",
                                 @"Red",
                                 @"Yellow"
                                 ];
     
-    self.allCategories   = @[PhoneRingtone, SoundProfile, IncomingCallVibration, BackgroundColor];
+    BackgroundImage.name = @"Background Image";
+    BackgroundImage.options = @[
+                                @"Rainy Day",
+                                @"Snowflakes",
+                                @"Yellow flower",
+                                @"Digital waves",
+                                @"Abstract yellow",
+                                @"Orange View",
+                                @"Art"
+                                ];
+    
+    
+    
+    
+    self.allCategories   = @[PhoneRingtone, SoundProfile, IncomingCallVibration, FontColor, BackgroundImage];
     
 }
 
@@ -67,7 +85,10 @@
     [super viewDidLoad];
     [self initializeData];
     self.navigationItem.title = @"🔅Settings🔅";
-    
+//     if ([self.category.selection isEqualToString: @"Yellow" ]) {
+//    //   self.navigationController.view.backgroundColor = [UIColor yellowColor];
+//    self.tableView.backgroundColor = [UIColor yellowColor];
+//    //}
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -75,6 +96,9 @@
     [super viewWillAppear:animated];
     // set navigation bar's tint color when being shown
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.60 green:0.78 blue:0.95 alpha:1.0];
+    
+    
+ 
  }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -92,7 +116,55 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     cell.backgroundColor = indexPath.row % 2
     ? [UIColor colorWithRed:0.87 green:0.93 blue:0.98 alpha:1.0]
         : [UIColor whiteColor];
+    
+    
+    
+    
+    cell.backgroundColor = [UIColor clearColor];
+    
+    
+    if ([self.displayCategory.selection isEqualToString: @"Rainy Day" ]) {
+        [self backgroundImageChanged:@"rainyDay"];
+        
+    }
+    else if ([self.displayCategory.selection isEqualToString: @"Snowflakes" ]) {
+        [self backgroundImageChanged:@"snowflakes"];
+    }
+    else if ([self.displayCategory.selection isEqualToString: @"Yellow flower" ]) {
+        [self backgroundImageChanged:@"yellowFlower"];
+    }
+    else if ([self.displayCategory.selection isEqualToString: @"Abstract yellow" ]) {
+        [self backgroundImageChanged:@"abstract-yellow-wallpaper"];
+    }
+    else if ([self.displayCategory.selection isEqualToString: @"Digital waves" ]) {
+        [self backgroundImageChanged:@"digital-waves-background"];
+    }
+    else if ([self.displayCategory.selection isEqualToString: @"Art" ]) {
+        [self backgroundImageChanged:@"art"];
+    }
+    else if ([self.displayCategory.selection isEqualToString: @"Orange View" ]) {
+        [self backgroundImageChanged:@"orange"];
+    }
+ 
+    
 }
+
+
+
+-(void) backgroundImageChanged : (NSString *)name {
+ 
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:name] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+ 
+}
+
+    
+    
+
 
 
 
@@ -114,14 +186,23 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CategorySelected" forIndexPath:indexPath];
-    CQCategory *displayCategory = [self.allCategories objectAtIndex:indexPath.row];
+    self.displayCategory = [self.allCategories objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = displayCategory.name;
+    cell.textLabel.text = self.displayCategory.name;
     
-    cell.detailTextLabel.text = displayCategory.selection;
-    
+    cell.detailTextLabel.text = self.displayCategory.selection;
+ 
     return cell;
+    
 }
+
+
+
+
+
+
+
+
 
 #pragma mark - Navigation
 
