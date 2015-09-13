@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		8DECE7921B78082B0064D760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7911B78082B0064D760 /* main.m */; };
 		8DECE7951B78082B0064D760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7941B78082B0064D760 /* AppDelegate.m */; };
-		8DECE7981B78082B0064D760 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7971B78082B0064D760 /* ViewController.m */; };
 		8DECE79B1B78082B0064D760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE7991B78082B0064D760 /* Main.storyboard */; };
 		8DECE79D1B78082B0064D760 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE79C1B78082B0064D760 /* Images.xcassets */; };
 		8DECE7A01B78082B0064D760 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE79E1B78082B0064D760 /* LaunchScreen.xib */; };
 		8DECE7AC1B78082B0064D760 /* OptionSelectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7AB1B78082B0064D760 /* OptionSelectorTests.m */; };
+		A4E233DD1B7ADC98009C1E3E /* CQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E233DC1B7ADC98009C1E3E /* CQCategory.m */; };
+		A4E7964E1BA4C81800B6BE84 /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7964D1BA4C81800B6BE84 /* RootTableViewController.m */; };
+		A4E796511BA4C89C00B6BE84 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E796501BA4C89C00B6BE84 /* DetailTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,19 @@
 		8DECE7911B78082B0064D760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DECE7931B78082B0064D760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DECE7941B78082B0064D760 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8DECE7961B78082B0064D760 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8DECE7971B78082B0064D760 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8DECE79A1B78082B0064D760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DECE79C1B78082B0064D760 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8DECE79F1B78082B0064D760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8DECE7A51B78082B0064D760 /* OptionSelectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptionSelectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DECE7AA1B78082B0064D760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DECE7AB1B78082B0064D760 /* OptionSelectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OptionSelectorTests.m; sourceTree = "<group>"; };
+		A4E233DB1B7ADC98009C1E3E /* CQCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQCategory.h; sourceTree = "<group>"; };
+		A4E233DC1B7ADC98009C1E3E /* CQCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQCategory.m; sourceTree = "<group>"; };
+		A4E7964C1BA4C81800B6BE84 /* RootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootTableViewController.h; path = ../RootTableViewController.h; sourceTree = "<group>"; };
+		A4E7964D1BA4C81800B6BE84 /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootTableViewController.m; path = ../RootTableViewController.m; sourceTree = "<group>"; };
+		A4E7964F1BA4C89C00B6BE84 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailTableViewController.h; path = ../DetailTableViewController.h; sourceTree = "<group>"; };
+		A4E796501BA4C89C00B6BE84 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailTableViewController.m; path = ../DetailTableViewController.m; sourceTree = "<group>"; };
+		A4E796521BA5DA4B00B6BE84 /* DetailViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewControllerDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +90,14 @@
 			children = (
 				8DECE7931B78082B0064D760 /* AppDelegate.h */,
 				8DECE7941B78082B0064D760 /* AppDelegate.m */,
-				8DECE7961B78082B0064D760 /* ViewController.h */,
-				8DECE7971B78082B0064D760 /* ViewController.m */,
+				A4E233DB1B7ADC98009C1E3E /* CQCategory.h */,
+				A4E233DC1B7ADC98009C1E3E /* CQCategory.m */,
+				A4E7964C1BA4C81800B6BE84 /* RootTableViewController.h */,
+				A4E7964D1BA4C81800B6BE84 /* RootTableViewController.m */,
+				A4E7964F1BA4C89C00B6BE84 /* DetailTableViewController.h */,
+				A4E796501BA4C89C00B6BE84 /* DetailTableViewController.m */,
 				8DECE7991B78082B0064D760 /* Main.storyboard */,
+				A4E796521BA5DA4B00B6BE84 /* DetailViewControllerDelegate.h */,
 				8DECE79C1B78082B0064D760 /* Images.xcassets */,
 				8DECE79E1B78082B0064D760 /* LaunchScreen.xib */,
 				8DECE78F1B78082B0064D760 /* Supporting Files */,
@@ -219,9 +231,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DECE7981B78082B0064D760 /* ViewController.m in Sources */,
+				A4E796511BA4C89C00B6BE84 /* DetailTableViewController.m in Sources */,
 				8DECE7951B78082B0064D760 /* AppDelegate.m in Sources */,
+				A4E233DD1B7ADC98009C1E3E /* CQCategory.m in Sources */,
 				8DECE7921B78082B0064D760 /* main.m in Sources */,
+				A4E7964E1BA4C81800B6BE84 /* RootTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +432,7 @@
 				8DECE7B11B78082B0064D760 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DECE7B21B78082B0064D760 /* Build configuration list for PBXNativeTarget "OptionSelectorTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +441,7 @@
 				8DECE7B41B78082B0064D760 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
