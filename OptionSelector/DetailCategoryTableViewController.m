@@ -10,6 +10,8 @@
 
 @interface DetailCategoryTableViewController ()
 
+@property (nonatomic) NSIndexPath *markedIndexPath;
+
 @end
 
 @implementation DetailCategoryTableViewController
@@ -17,6 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.markedIndexPath = indexPath;
+    self.category.categoryIndexPath = indexPath;
+    self.category.selection = self.category.options[indexPath.row];
+    [self.tableView reloadData];
 }
 
 
@@ -31,24 +40,17 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DetailViewIdentifier" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DetailCellIdentifier" forIndexPath:indexPath];
     
-    NSString *categorySelected = self.category.options[indexPath.row];
-    cell.textLabel.text = categorySelected;
+    cell.textLabel.text  = self.category.options[indexPath.row];
     
-    if (self.category.options[indexPath.row] == self.category.selected) {
+    if ([self.markedIndexPath isEqual:indexPath] || [self.category.categoryIndexPath isEqual:indexPath]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
     
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.category.selected = self.category.options[indexPath.row];
-    
-    [self.tableView reloadData];
 }
 
 

@@ -12,6 +12,7 @@
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSArray *options;
-@property (nonatomic) NSString *selected;
+@property (nonatomic) NSString *selection;
+@property (nonatomic) NSIndexPath *categoryIndexPath;
 
 @end

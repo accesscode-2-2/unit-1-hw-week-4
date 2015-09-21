@@ -13,12 +13,17 @@
 
 @interface CatagoryTableViewController ()
 
+@property (nonatomic) NSMutableArray *categorySections;
+
 @end
 
 @implementation CatagoryTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.categorySections = [[NSMutableArray alloc] init];
+    
+    
     CQCategory *carSection = [[CQCategory alloc] init];
     
     carSection.name = @"Cars";
@@ -49,12 +54,22 @@
                              @"Nokia",
                              @"HTC",
                              ];
+    
+    [self.categorySections addObject:carSection];
+    [self.categorySections addObject:computerSection];
+    [self.categorySections addObject:phoneSection];
 
-    self.categorySections = @[carSection, computerSection, phoneSection];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [self.tableView reloadData];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    DetailCategoryTableViewController *detailVC = [storyboard instantiateViewControllerWithIdentifier:@"DetailCategoryVC"];
+    detailVC.category = self.categorySections[indexPath.row];
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 #pragma mark - Table view data source
@@ -69,10 +84,12 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"categoryIdentifier" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CQcellID" forIndexPath:indexPath];
     
     CQCategory *categorySections = self.categorySections[indexPath.row];
-    cell.textLabel.text = categorySections.selected;
+    cell.textLabel.text = categorySections.name;
+    cell.detailTextLabel.text = [self.categorySections[indexPath.row
+                                                       ]selection];
 
     return cell;
 }

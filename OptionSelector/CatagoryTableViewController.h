@@ -10,6 +10,5 @@
 
 @interface CatagoryTableViewController : UITableViewController
 
-@property (nonatomic) NSArray *categorySections;
 
 @end
