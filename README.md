@@ -24,4 +24,4 @@ This is a suggestion for how to organize your data.
 6. When selection is made on a cell, update the corrosponding objects `selection` property.
 7. Make sure that the cells in the first `UITableViewController` are displaying the `selection` property.
 
-:) :) :) 
+:) :) :) cool!
