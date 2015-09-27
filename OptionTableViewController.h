@@ -9,10 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Category.h"
 
-@end
 @interface OptionTableViewController : UITableViewController
 
-
-@property(nonatomic) NSArray *chosenObjects;
+@property(nonatomic) CQCategory *category;
 
 @end

@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Category.h"
 
-@end
+
 @interface DetailTableViewController : UITableViewController
 
 @property (nonatomic) CQCategory *category;
+@property (nonatomic) NSMutableArray *categories;
 
 @end

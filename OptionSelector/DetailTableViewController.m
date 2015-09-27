@@ -6,9 +6,14 @@
 //  Copyright © 2015 Mike Kavouras. All rights reserved.
 //
 
+#import "OptionTableViewController.h"
 #import "DetailTableViewController.h"
+#import "Category.h"
+
 
 @interface DetailTableViewController ()
+
+//@property (nonatomic) NSMutableArray *categories;
 
 @end
 
@@ -16,85 +21,88 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.categories = [[NSMutableArray alloc]init];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    CQCategory *cars = [[CQCategory alloc] init];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    cars.name = @"Cars";
+    cars.type = @[@"Nissan",
+                               @"Toyota",
+                               @"Honda",
+                               @"Infiniti",
+                               @"Lexus",
+                               @"Acura",
+                               @"Mercedes",
+                               @"BMW",
+                               @"Audi"];
+    
+    CQCategory *cities = [[CQCategory alloc] init];
+    
+    cities.name = @"Cities";
+    cities.type = @[@"New York",
+                              @"L.A.",
+                              @"Chicago",
+                              @"San Francisco",
+                              @"Boston",
+                              @"St. Louis",
+                              @"Miami"];
+    
+    CQCategory *houses = [[CQCategory alloc] init];
+    
+    houses.name = @"Houses";
+    houses.type = @[@"Colonial",
+                             @"Ranch",
+                             @"Tudor",
+                             @"Georgian",
+                             @"Farmhouse",
+                             @"Bungalow",
+                             @"Neomodern"];
+    
+    [self.categories addObject: cars];
+    [self.categories addObject:cities];
+    [self.categories addObject:houses];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidAppear:(BOOL)animated {
+    [self.tableView reloadData];
+    
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return self.category.type.count;
+    return self.categories.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Selected" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier" forIndexPath:indexPath];
     
-    NSString *typeChosen = self.category.type[indexPath.row];
-    cell.textLabel.text = typeChosen;
+    CQCategory *categories = self.categories[indexPath.row];
+    cell.textLabel.text = categories.name;
     
+    cell.detailTextLabel.text = categories.tile;
     
     return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    
+    CQCategory *categories = self.categories[selectedIndexPath.row];
+    
+    OptionTableViewController *vc = segue.destinationViewController;
+    
+    vc.category = categories;
+    
 }
-*/
+
 
 @end

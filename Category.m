@@ -8,7 +8,7 @@
 
 #import "Category.h"
 
-@implementation CQCategory : NSObject
+@implementation CQCategory
 
 
 @end
