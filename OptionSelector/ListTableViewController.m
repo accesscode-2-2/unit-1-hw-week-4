@@ -6,6 +6,9 @@
 //  Copyright (c) 2015 Mike Kavouras. All rights reserved.
 //
 
+#define PreferredRedShade @"PreferredRedShade"
+#define PreferredYellowShade @"Pr
+
 #import "ListTableViewController.h"
 
 @interface ListTableViewController ()

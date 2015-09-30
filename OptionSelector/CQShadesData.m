@@ -11,6 +11,16 @@
 
 @implementation CQShadesData
 
++ (UIColor *)makeColorWithRed:(NSInteger)red
+                        green:(NSInteger)green
+                         blue:(NSInteger)blue {
+    return [UIColor colorWithRed:red / 255.0
+                           green:green / 255.0
+                            blue:blue / 255.0
+                           alpha:1.0];
+}
+
+
 -(void)initializeData{
 
     self.red = [[CQCategory alloc] init];
@@ -88,27 +98,26 @@
                           @"arctic"
                           ];
    
-    //Without (CGFLoat) OR the decimal (.0) after the number the UIColor will not show; one OR the other is sufficient.
-    UIColor *cherry = [UIColor colorWithRed:(CGFloat)164.0/255.0 green:(CGFloat)0.0/255.0 blue:(CGFloat)0.0/255.0 alpha:(CGFloat)1.0];
     
-    UIColor *rose = [UIColor colorWithRed:(CGFloat)227.0/255.0 green:(CGFloat)38.0/255.0 blue:(CGFloat)54.0/255.0 alpha:1.0];
-    UIColor *jam = [UIColor colorWithRed:(CGFloat)195.0/255.0 green:(CGFloat)33.0/255.0 blue:(CGFloat)72.0/255.0 alpha:1.0];
-    UIColor *merlot = [UIColor colorWithRed:(CGFloat)112.0/255.0 green:(CGFloat)28.0/255.0 blue:(CGFloat)28.0/255.0 alpha:1.0];
-    UIColor *garnet = [UIColor colorWithRed:(CGFloat)128.0/255.0 green:(CGFloat)0.0/255.0 blue:(CGFloat)0.0/255.0 alpha:1.0];
-    UIColor *crimson = [UIColor colorWithRed:(CGFloat)178.0/255.0 green:(CGFloat)34.0/255.0 blue:(CGFloat)34.0/255.0 alpha:1.0];
-    UIColor *ruby = [UIColor colorWithRed:(CGFloat)206.0/255.0 green:(CGFloat)32.0/255.0 blue:(CGFloat)32.0/255.0 alpha:1.0];
-    UIColor *scarlet = [UIColor colorWithRed:(CGFloat)179.0/255.0 green:(CGFloat)27.0/255.0 blue:(CGFloat)27.0/255.0 alpha:1.0];
-    UIColor *wine = [UIColor colorWithRed:(CGFloat)86.0/255.0 green:(CGFloat)3.0/255.0 blue:(CGFloat)25.0/255.0 alpha:1.0];
-    UIColor *brick = [UIColor colorWithRed:(CGFloat)150.0/255.0 green:(CGFloat)0.0/255.0 blue:(CGFloat)24.0/255.0 alpha:1.0];
-    UIColor *apple = [UIColor colorWithRed:(CGFloat)227.0/255.0 green:(CGFloat)0.0/255.0 blue:(CGFloat)34.0/255.0 alpha:1.0];
-    UIColor *mahogany = [UIColor colorWithRed:(CGFloat)60.0/255.0 green:(CGFloat)20.0/255.0 blue:(CGFloat)20.0/255.0 alpha:1.0];
-    UIColor *blood = [UIColor colorWithRed:(CGFloat)128.0/255.0 green:(CGFloat)0.0/255.0 blue:(CGFloat)0.0/255.0 alpha:1.0];
-    UIColor *sangria = [UIColor colorWithRed:(CGFloat)128.0/255.0 green:(CGFloat)0.0/255.0 blue:(CGFloat)32.0/255.0 alpha:1.0];
-    UIColor *berry = [UIColor colorWithRed:(CGFloat)135.0/255.0 green:(CGFloat)38.0/255.0 blue:(CGFloat)87.0/255.0 alpha:1.0];
-    UIColor *currant = [UIColor colorWithRed:(CGFloat)101.0/255.0 green:(CGFloat)0.0/255.0 blue:(CGFloat)11.0/255.0 alpha:1.0];
-    UIColor *blush = [UIColor colorWithRed:(CGFloat)205.0/255.0 green:(CGFloat)92.0/255.0 blue:(CGFloat)92.0/255.0 alpha:1.0];
-    UIColor *candy = [UIColor colorWithRed:(CGFloat)255.0/255.0 green:(CGFloat)8.0/255.0 blue:(CGFloat)0.0/255.0 alpha:1.0];
-    UIColor *lipstick = [UIColor colorWithRed:(CGFloat)204.0/255.0 green:(CGFloat)0.0/255.0 blue:(CGFloat)0.0/255.0 alpha:1.0];
+    UIColor *cherry = [CQShadesData makeColorWithRed:164 green:0 blue:0];
+    UIColor *rose = [CQShadesData makeColorWithRed:277 green:38 blue:54];
+    UIColor *jam = [CQShadesData makeColorWithRed:195 green:33 blue:72];
+    UIColor *merlot = [CQShadesData makeColorWithRed:112 green:28 blue:28];
+    UIColor *garnet = [CQShadesData makeColorWithRed:128 green:0 blue:0];
+    UIColor *crimson = [CQShadesData makeColorWithRed:178 green:34 blue:34];
+    UIColor *ruby = [CQShadesData makeColorWithRed:206 green:32 blue:32];
+    UIColor *scarlet = [CQShadesData makeColorWithRed:179 green:27 blue:27];
+    UIColor *wine = [CQShadesData makeColorWithRed:86 green:3 blue:25];
+    UIColor *brick = [CQShadesData makeColorWithRed:150 green:0 blue:24];
+    UIColor *apple = [CQShadesData makeColorWithRed:227 green:0 blue:34];
+    UIColor *mahogany = [CQShadesData makeColorWithRed:60 green:20 blue:20];
+    UIColor *blood = [CQShadesData makeColorWithRed:128 green:0 blue:0];
+    UIColor *sangria = [CQShadesData makeColorWithRed:128 green:0 blue:32];
+    UIColor *berry = [CQShadesData makeColorWithRed:135 green:38 blue:87];
+    UIColor *currant = [CQShadesData makeColorWithRed:101 green:0 blue:11];
+    UIColor *blush = [CQShadesData makeColorWithRed:205 green:92 blue:92];
+    UIColor *candy = [CQShadesData makeColorWithRed:255 green:8 blue:0];
+    UIColor *lipstick = [CQShadesData makeColorWithRed:204 green:0 blue:0];
     
     
     self.red.shadeColors = @[cherry,
