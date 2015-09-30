@@ -183,25 +183,25 @@
                                 tuscanSun
                             ];
     
-    UIColor *slate = [UIColor colorWithRed:112.0/255.0 green:128.0/255.0 blue:144.0/255.0 alpha:1.0];
-    UIColor *sky = [UIColor colorWithRed:135.0/255.0 green:206.0/255.0 blue:235.0/255.0 alpha:1.0];
-    UIColor *navy = [UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:128.0/255.0 alpha:1.0];
-    UIColor *indigo = [UIColor colorWithRed:75.0/255.0 green:0.0/255.0 blue:130.0/255.0 alpha:1.0];
-    UIColor *cobalt = [UIColor colorWithRed:0.0/255.0 green:71.0/255.0 blue:171.0/255.0 alpha:1.0];
-    UIColor *teal = [UIColor colorWithRed:0.0/255.0 green:128.0/255.0 blue:128.0/255.0 alpha:1.0];
-    UIColor *ocean = [UIColor colorWithRed:47.0/255.0 green:79.0/255.0 blue:79.0/255.0 alpha:1.0];
-    UIColor *peacock = [UIColor colorWithRed:47.0/255.0 green:47.0/255.0 blue:79.0/255.0 alpha:1.0];
-    UIColor *azure = [UIColor colorWithRed:0.0/255.0 green:51.0/255.0 blue:153.0/255.0 alpha:1.0];
-    UIColor *cerulean = [UIColor colorWithRed:0.0/255.0 green:123.0/255.0 blue:167.0/255.0 alpha:1.0];
-    UIColor *lapis = [UIColor colorWithRed:21.0/255.0 green:96.0/255.0 blue:89.0/255.0 alpha:1.0];
-    UIColor *spruce = [UIColor colorWithRed:117.0/255.0 green:133.0/255.0 blue:123.0/255.0 alpha:1.0];
-    UIColor *stone = [UIColor colorWithRed:83.0/255.0 green:104.0/255.0 blue:120.0/255.0 alpha:1.0];
-    UIColor *aegean = [UIColor colorWithRed:8.0/255.0 green:69.0/255.0 blue:126.0/255.0 alpha:1.0];
-    UIColor *blueberry = [UIColor colorWithRed:25.0/255.0 green:25.0/255.0 blue:112.0/255.0 alpha:1.0];
-    UIColor *denim = [UIColor colorWithRed:0.0/255.0 green:35.0/255.0 blue:102.0/255.0 alpha:1.0];
-    UIColor *admiral = [UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:156.0/255.0 alpha:1.0];
-    UIColor *sapphire = [UIColor colorWithRed:18.0/255.0 green:97.0/255.0 blue:128.0/255.0 alpha:1.0];
-    UIColor *arctic = [UIColor colorWithRed:231.0/255.0 green:254.0/255.0 blue:255.0/255.0 alpha:1.0];
+    UIColor *slate = [CQShadesData makeColorWithRed:112 green:128 blue:144];
+    UIColor *sky = [CQShadesData makeColorWithRed:135 green:206 blue:235];
+    UIColor *navy = [CQShadesData makeColorWithRed:0 green:0 blue:128];
+    UIColor *indigo = [CQShadesData makeColorWithRed:75 green:0 blue:130];
+    UIColor *cobalt = [CQShadesData makeColorWithRed:0 green:71 blue:171];
+    UIColor *teal = [CQShadesData makeColorWithRed:0 green:128 blue:128];
+    UIColor *ocean = [CQShadesData makeColorWithRed:47 green:79 blue:79];
+    UIColor *peacock = [CQShadesData makeColorWithRed:47 green:47 blue:79];
+    UIColor *azure = [CQShadesData makeColorWithRed:0 green:51 blue:153];
+    UIColor *cerulean = [CQShadesData makeColorWithRed:0 green:123 blue:167];
+    UIColor *lapis = [CQShadesData makeColorWithRed:21 green:96 blue:89];
+    UIColor *spruce = [CQShadesData makeColorWithRed:117 green:133 blue:123];
+    UIColor *stone = [CQShadesData makeColorWithRed:83 green:104 blue:120];
+    UIColor *aegean = [CQShadesData makeColorWithRed:8 green:69 blue:126];
+    UIColor *blueberry = [CQShadesData makeColorWithRed:25 green:25 blue:112];
+    UIColor *denim = [CQShadesData makeColorWithRed:0 green:35 blue:102];
+    UIColor *admiral = [CQShadesData makeColorWithRed:0 green:0 blue:156];
+    UIColor *sapphire = [CQShadesData makeColorWithRed:18 green:97 blue:128];
+    UIColor *arctic = [CQShadesData makeColorWithRed:231 green:254 blue:255];
 
     self.blue.shadeColors = @[slate,
                               sky,
