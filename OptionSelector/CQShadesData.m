@@ -141,25 +141,25 @@
                              lipstick
                             ];
     
-    UIColor *canary = [UIColor colorWithRed:(CGFloat)255/255 green:(CGFloat)191/255 blue:(CGFloat)0/255 alpha:1];
-    UIColor *gold = [UIColor colorWithRed:(CGFloat)255/255 green:(CGFloat)179/255 blue:(CGFloat)71/255 alpha:1];
-    UIColor *daffodil = [UIColor colorWithRed:(CGFloat)247/255 green:(CGFloat)233/255 blue:(CGFloat)142/255 alpha:1];
-    UIColor *flaxen = [UIColor colorWithRed:(CGFloat)181/255 green:(CGFloat)166/255 blue:(CGFloat)66/255 alpha:1];
-    UIColor *butter = [UIColor colorWithRed:(CGFloat)255/255 green:(CGFloat)248/255 blue:(CGFloat)220/255 alpha:1];
-    UIColor *lemon = [UIColor colorWithRed:(CGFloat)255/255 green:(CGFloat)247/255 blue:(CGFloat)0/255 alpha:1];
-    UIColor *mustard = [UIColor colorWithRed:(CGFloat)255/255 green:(CGFloat)219/255 blue:(CGFloat)88/255 alpha:1];
-    UIColor *corn = [UIColor colorWithRed:(CGFloat)233/255 green:(CGFloat)214/255 blue:(CGFloat)107/255 alpha:1];
-    UIColor *medallion = [UIColor colorWithRed:(CGFloat)218/255 green:(CGFloat)165/255 blue:(CGFloat)32/255 alpha:1];
-    UIColor *dandelion = [UIColor colorWithRed:(CGFloat)255/255 green:(CGFloat)209/255 blue:(CGFloat)42/255 alpha:1];
-    UIColor *fire = [UIColor colorWithRed:(CGFloat)228/255 green:(CGFloat)155/255 blue:(CGFloat)15/255 alpha:1];
-    UIColor *bumblebee = [UIColor colorWithRed:(CGFloat)236/255 green:(CGFloat)213/255 blue:(CGFloat)64/255 alpha:1];
-    UIColor *banana = [UIColor colorWithRed:(CGFloat)255/255 green:(CGFloat)253/255 blue:(CGFloat)208/255 alpha:1];
-    UIColor *butterscotch = [UIColor colorWithRed:(CGFloat)244/255 green:(CGFloat)196/255 blue:(CGFloat)48/255 alpha:1];
-    UIColor *dijon = [UIColor colorWithRed:(CGFloat)184/255 green:(CGFloat)134/255 blue:(CGFloat)11/255 alpha:1];
-    UIColor *honey = [UIColor colorWithRed:(CGFloat)240/255 green:(CGFloat)220/255 blue:(CGFloat)130/255 alpha:1];
-    UIColor *blonde = [UIColor colorWithRed:(CGFloat)250/255 green:(CGFloat)240/255 blue:(CGFloat)190/255 alpha:1];
-    UIColor *pineapple = [UIColor colorWithRed:(CGFloat)251/255 green:(CGFloat)236/255 blue:(CGFloat)93/255 alpha:1];
-    UIColor *tuscanSun = [UIColor colorWithRed:(CGFloat)255/255 green:(CGFloat)223/255 blue:(CGFloat)0/255 alpha:1];
+    UIColor *canary = [CQShadesData makeColorWithRed:255 green:191 blue:0];
+    UIColor *gold = [CQShadesData makeColorWithRed:255 green:179 blue:71];
+    UIColor *daffodil = [CQShadesData makeColorWithRed:247 green:233 blue:142];
+    UIColor *flaxen = [CQShadesData makeColorWithRed:181 green:166 blue:66];
+    UIColor *butter = [CQShadesData makeColorWithRed:255 green:248 blue:220];
+    UIColor *lemon = [CQShadesData makeColorWithRed:255 green:247 blue:0];
+    UIColor *mustard = [CQShadesData makeColorWithRed:255 green:219 blue:88];
+    UIColor *corn = [CQShadesData makeColorWithRed:233 green:214 blue:107];
+    UIColor *medallion = [CQShadesData makeColorWithRed:218 green:165 blue:32];
+    UIColor *dandelion = [CQShadesData makeColorWithRed:255 green:209 blue:42];
+    UIColor *fire = [CQShadesData makeColorWithRed:228 green:155 blue:15];
+    UIColor *bumblebee = [CQShadesData makeColorWithRed:236 green:213 blue:64];
+    UIColor *banana = [CQShadesData makeColorWithRed:255 green:225 blue:53];
+    UIColor *butterscotch = [CQShadesData makeColorWithRed:244 green:196 blue:48];
+    UIColor *dijon = [CQShadesData makeColorWithRed:184 green:134 blue:11];
+    UIColor *honey = [CQShadesData makeColorWithRed:240 green:220 blue:130];
+    UIColor *blonde = [CQShadesData makeColorWithRed:250 green:240 blue:190];
+    UIColor *pineapple = [CQShadesData makeColorWithRed:251 green:236 blue:93];
+    UIColor *tuscanSun = [CQShadesData makeColorWithRed:255 green:223 blue:0];
 
     
     self.yellow.shadeColors = @[canary,
