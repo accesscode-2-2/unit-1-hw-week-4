@@ -11,8 +11,6 @@
 #import "CQCategory.h"
 #import "CQShadesData.h"
 
-
-
 @interface CategoriesRootViewTableViewController () <ListTableViewControllerDelegate>
 
 @property (nonatomic)CQShadesData *model;
@@ -84,9 +82,10 @@
 
 -(void) didSelectShade: (NSString *)shade withColor: (UIColor *)color atIndexPath: (NSIndexPath *) indexPath{
     
+    CQCategory *category = self.data[indexPath.row];
     
-    ((CQCategory *) self.data[indexPath.row]).selectedOption = shade;
-    ((CQCategory *) self.data[indexPath.row]).selectedShadeColor = color;
+    category.selectedOption = shade;
+    category.selectedShadeColor = color;
     
     [self.tableView reloadData];
     
