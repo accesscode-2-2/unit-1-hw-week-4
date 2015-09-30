@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CQCategory.h"
 
 @interface DetailTableViewController : UITableViewController
 
-@property (nonatomic)NSArray *objects;
+@property (nonatomic)CQCategory *category;
 
 @end

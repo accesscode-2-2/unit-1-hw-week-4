@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CQCategory.h"
+#import "ModelCategory.h"
  
 @interface CQCategoryTableViewController : UITableViewController
+
+@property (nonatomic) ModelCategory *model;
 
 @end

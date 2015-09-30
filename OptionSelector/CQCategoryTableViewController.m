@@ -8,72 +8,128 @@
 
 #import "CQCategoryTableViewController.h"
 #import "DetailTableViewController.h"
-#import "CQCategory.h"
+
 
 @interface CQCategoryTableViewController ()
-
-@property (nonatomic) CQCategory *guitar;
-@property (nonatomic) NSArray *objects;
-
 
 @end
 
 @implementation CQCategoryTableViewController
 
-#pragma mark - life cycle method
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.guitar = [[CQCategory alloc]init];
-    [self.guitar intializeData];
+    self.model = [ModelCategory sharedInstance];
+    [self.model initializeModel];
     
-    self.navigationItem.title = @"Guitars";
-    }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
 
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
-    
-    return [self.guitar.options allKeys].count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSArray *keys = [self.guitar.options allKeys];
-    NSString *key = [keys objectAtIndex:section];
-    NSArray *values = [self.guitar.options objectForKey:key];
-    
-    return  values.count;
+    return [self.model.categories count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"selectorIdentifier" forIndexPath:indexPath];
-   
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"iGotMyDoodlyCell" forIndexPath:indexPath];
     
-    NSString *selection = [options objectForIndexPath:indexPath];
+    CQCategory *category = [self.model.categories objectAtIndex:indexPath.row];
     
-
-    
+    cell.textLabel.text = category.name;
+    cell.detailTextLabel.text = category.selection;
+    [cell layoutIfNeeded];
     return cell;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    DetailTableViewController *detailView = segue.destinationViewController;
-    detailView.objects = self.objects;
+
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    CQCategory *currentCategory = [self.model.categories objectAtIndex:indexPath.row];
+    DetailTableViewController *detailVC = segue.destinationViewController;
+    detailVC.category = currentCategory;
+    
 }
 
 
 
 
-
-
-
-
-
-
+//
+//#pragma mark - life cycle method
+//
+//
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//    
+//    self.guitar = [[CQCategory alloc]init];
+//    [self.guitar intializeData];
+//    
+//    self.navigationItem.title = @"Guitars";
+//    }
+//
+//
+//#pragma mark - Table view data source
+//
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//
+//    
+//    return [self.guitar.options allKeys].count;
+//}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//    NSArray *keys = [self.guitar.options allKeys];
+//    NSString *key = [keys objectAtIndex:section];
+//    NSArray *values = [self.guitar.options objectForKey:key];
+//    
+//    return  values.count;
+//}
+//
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"selectorIdentifier" forIndexPath:indexPath];
+//   
+//    
+//    NSString *selection = [options objectForIndexPath:indexPath];
+//    
+//
+//    
+//    return cell;
+//}
+//
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    DetailTableViewController *detailView = segue.destinationViewController;
+//    detailView.objects = self.objects;
+//}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 @end
