@@ -223,6 +223,10 @@
                               sapphire,
                               arctic
                             ];
+    
+    [self.red loadDefaults];
+    [self.blue loadDefaults];
+    [self.yellow loadDefaults];
 
 }
 

@@ -6,9 +6,6 @@
 //  Copyright (c) 2015 Mike Kavouras. All rights reserved.
 //
 
-#define RedShadeKey @"RedShadeKey"
-#define YellowShadeKey @"YellowShadeKey"
-#define BlueShadeKey @"BlueShadeKey"
 
 #import "ListTableViewController.h"
 

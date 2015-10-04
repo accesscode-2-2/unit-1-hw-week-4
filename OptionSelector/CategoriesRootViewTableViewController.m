@@ -87,6 +87,8 @@
     category.selectedOption = shade;
     category.selectedShadeColor = color;
     
+    [category saveSelection];
+    
     [self.tableView reloadData];
     
     NSLog(@"Did select shade: %@", shade);

@@ -19,4 +19,8 @@
 @property (nonatomic) NSString *selectedOption;
 @property (nonatomic) UIColor *selectedShadeColor;
 
+-(void)saveSelection;
+
+-(void)loadDefaults;
+
 @end
