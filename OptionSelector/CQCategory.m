@@ -10,5 +10,21 @@
 
 @implementation CQCategory
 
+- (void)saveSelection {
+    
+    // Store the dictionary in NSUserDefaults with the key: self.name
+    [[NSUserDefaults standardUserDefaults] setObject:self.selection forKey:self.name];
+}
+
+- (void)loadDefaults {
+    
+    NSString *selection = [[NSUserDefaults standardUserDefaults] objectForKey:self.name];
+    if (selection != nil) {
+        self.selection = selection;
+    }
+
+}
+
+
 
 @end

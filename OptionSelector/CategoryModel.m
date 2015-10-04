@@ -11,18 +11,17 @@
 
 @implementation CategoryModel
 
-
-+ (instancetype)sharedInstance
-{
++ (instancetype)sharedInstance {
+    
     static CategoryModel *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[CategoryModel alloc] init];
-        // Do any other initialisation stuff here
     });
     return sharedInstance;
     
 }
+
 
 - (void)initializeModel {
     
@@ -44,6 +43,7 @@
     dogs.selection = @"";
     dogs.index = 0;
     [self.categories addObject:dogs];
+    [dogs loadDefaults];
     
     CQCategory *cars = [[CQCategory alloc] init];
     cars.name = @"Cars";
@@ -61,6 +61,7 @@
     cars.selection = @"";
     cars.index = 1;
     [self.categories addObject:cars];
+    [cars loadDefaults];
     
     CQCategory *candies = [[CQCategory alloc] init];
     candies.name = @"Candies";
@@ -79,6 +80,7 @@
     candies.selection = @"";
     candies.index = 2;
     [self.categories addObject:candies];
+    [candies loadDefaults];
     
 }
 

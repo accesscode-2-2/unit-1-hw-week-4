@@ -53,6 +53,7 @@
     
     self.category.selection = selected;
     
+    [self.category saveSelection];
 }
 
 

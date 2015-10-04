@@ -15,4 +15,7 @@
 @property (nonatomic) NSString *selection;
 @property (nonatomic) NSUInteger index;
 
+- (void)saveSelection;
+- (void)loadDefaults;
+
 @end
