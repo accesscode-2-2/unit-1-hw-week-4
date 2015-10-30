@@ -2,8 +2,8 @@
 //  PastriesTableViewController.m
 //  OptionSelector
 //
-//  Created by  Christella on 8/13/15.
-//  Copyright (c) 2015 Mike Kavouras. All rights reserved.
+//  Created by  Christella  on 8/13/15.
+//  Copyright (c) 2015 Mike Kavouras. All rights  reserved.
 //
 
 #import "PastriesTableViewController.h"
@@ -36,6 +36,10 @@
     [self setupPastryData];
 
     self.navigationItem.title = @"🍧🍰  Pastries   🍰🍧";
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar
+setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
 
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.99 green:0.71 blue:0.83 alpha:1.0];
 
