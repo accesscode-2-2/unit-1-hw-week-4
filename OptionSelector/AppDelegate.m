@@ -16,7 +16,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    NSString *music = [[NSBundle mainBundle]pathForResource:@"pastryland" ofType:@"mp3"];
+    pastryMusic = [[AVAudioPlayer alloc] initWithContentsOfURL: [NSURL fileURLWithPath:music] error:NULL];
+    pastryMusic.delegate = self;
+    pastryMusic.numberOfLoops = -1;
+    [pastryMusic play];
+    
     return YES;
 }
 

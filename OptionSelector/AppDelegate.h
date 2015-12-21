@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@interface AppDelegate :UIResponder <UIApplicationDelegate, AVAudioPlayerDelegate> {
+    
+    AVAudioPlayer *pastryMusic;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
