@@ -7,6 +7,7 @@
 //
 
 #import "OSDetailLIstTableViewController.h"
+#import "CQCategory.h"
 
 
 @interface OSDetailLIstTableViewController ()
@@ -66,6 +67,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.category.selection = self.category.options[indexPath.row];
+    
+    
     
     [self.tableView reloadData];
 

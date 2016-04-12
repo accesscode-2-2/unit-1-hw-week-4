@@ -55,14 +55,13 @@
     
 //Array of CQCategory Objects
     self.categoryObjects = @[planetCategory, treatCategory, carsCategory];
-   
+    [self.tableView reloadData];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [self.tableView reloadData]; 
-    
-
+-(void)viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
 }
+
 
 #pragma mark - Table view data source
 
@@ -85,44 +84,12 @@
      cell.textLabel.text = categoryObject.name;
      
      cell.detailTextLabel.text = categoryObject.selection;
-    
-//     cell.detailTextLabel.text
-//     cell.detailTextLabel.text = categoryObject.selction[indexPath.row];
-     
-     
- 
- // Configure the cell...
- 
+
      return cell;
  }
- 
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-
-
 
  #pragma mark - Navigation
  
- // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
 // Get the new view controller using [segue destinationViewController].
@@ -141,15 +108,6 @@
      
     
      //we need to return the list of values associated witht he key selected.
-     
-
-     
-//in the pokemon project we turned the 
-//     PKDetailViewController *detailVC = [segue destinationViewController];
-//     detailVC.
-//     detailVC.pokemonName = cell.textLabel.text;
-//     detailVC.pokemonPhoto = cell.imageView.image;
-     
 
 }
 
